@@ -1,0 +1,44 @@
+---
+
+### timezone list
+### Currently: seoul, singapore, Newyork
+
+- name: Change timezone to Seoul
+  ansible.builtin.shell:
+    cmd: timedatectl set-timezone Asia/Seoul
+  when: >
+    ( 'seoul' in "{{ timezone }}" or 'Seoul' in "{{ timezone }}" )
+  register: seoul_result
+  changed_when: seoul_result.rc == 0
+
+- name: Change timezone to Singapore
+  ansible.builtin.shell:
+    cmd: timedatectl set-timezone Asia/Singapore
+  when: > 
+    ( 'singapore' in "{{ timezone }}" or 'Singapore' in "{{ timezone }}" )
+  register: singapore_result
+  changed_when: singapore_result.rc == 0
+
+- name: Change timezone to NewYork
+  ansible.builtin.shell:
+    cmd: timedatectl set-timezone America/New_York
+  when: > 
+    ( 'New_York' in "{{ timezone }}" or 'NewYork' in "{{ timezone }}" or 'Newyork' in "{{ timezone }}" )
+  register: NewYork_result
+  changed_when: NewYork_result.rc == 0
+
+
+
+
+### to display error debug msg when the timezone value is not available 
+- name: Set timezone_changed to true if any task played
+  set_fact:
+    timezone_changed: true
+  when: >
+    ( seoul_result.changed or singapore_result.changed or NewYork_result.changed )
+
+- name: Unknown timezone
+  ansible.builtin.debug:
+    msg: "Unknown timezone setting. Please input a defined value"
+  when: not ( timezone_changed | default(false) )
+  run_once: true

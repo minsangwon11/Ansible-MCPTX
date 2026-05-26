@@ -1,0 +1,4 @@
+# Purpose: Time synchronise to the external NTP server (time.bora.net)
+# Remarks: If the systems are in the isolated network env, such as: air-gapped env. We have got to figure out some other ways to synchronise NTP instead of this play
+# cmd: ansible-playbook --vault-id @prompt execute.yml
+# vault passwd: ntp-config

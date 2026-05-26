@@ -1,0 +1,4 @@
+---
+# vars file for ntp-role
+
+pcap_dir: /home/pcap

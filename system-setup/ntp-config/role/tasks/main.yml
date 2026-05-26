@@ -1,0 +1,15 @@
+---
+# tasks file for ntp-role
+
+### invoke ../package_installation.yml
+- name: tasks/package_installation.yml
+  ansible.builtin.include_tasks:
+    file: "package_installation.yml"
+
+### Fetch chrony.conf file - jinja tmplate
+- name: Fetch chrony.conf file
+  ansible.builtin.template:
+    src: chrony.conf.j2
+    dest: /etc/chrony.conf
+  changed_when: true    # execute handler regardness with result
+  notify: "Restart chronyd"

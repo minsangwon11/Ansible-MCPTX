@@ -1,0 +1,18 @@
+---
+- hosts: all
+  become: yes
+  gather_facts: yes
+  vars:
+    cap_file: "{{ ansible_facts['default_ipv4']['address'] }}_{{ ansible_facts.hostname }}.txt"
+  tasks:
+  - name: extract WARN & CRITICAL line
+    ansible.builtin.shell:
+      cmd: cat /home/BPFDoor/PIOLINK_scan* | grep -E "WARN|CRITICAL" >> {{ cap_file }}
+    args:
+      chdir: /home/BPFDoor
+  
+  - name: fetch file
+    ansible.builtin.fetch:
+      src: /home/BPFDoor/{{ cap_file }}
+      dest: /home/BPFDoor/result/
+      flat: yes

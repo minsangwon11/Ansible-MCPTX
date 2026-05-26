@@ -1,0 +1,6 @@
+---
+- hosts: SBC
+  remote_user: si
+  gather_facts: False
+  tasks:
+   - ansible.builtin.ping:

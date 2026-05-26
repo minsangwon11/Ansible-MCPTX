@@ -1,0 +1,17 @@
+---
+- name: chown | DBU/home/si 
+  ansible.builtin.file:
+    path: /home/si
+    owner: si
+    group: si
+  when: >
+    ( 'dbu' in ansible_facts['hostname'] )
+
+- name: chown | DBU/home/si/.bash*
+  ansible.builtin.file:
+    path: '/home/si/{{ item }}'
+    owner: si
+    group: si
+  loop: "{{ bash_files }}"
+  when: >
+    ( 'dbu' in ansible_facts['hostname'] )

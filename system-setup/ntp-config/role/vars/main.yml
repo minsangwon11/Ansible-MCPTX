@@ -1,0 +1,6 @@
+---
+# vars file for ntp-role
+
+service_name: chronyd
+package_name: chrony
+ntp_server: 203.248.240.140

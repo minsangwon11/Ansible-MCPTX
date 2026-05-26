@@ -1,0 +1,17 @@
+---
+# tasks file for
+
+- name: tasks/DBU_normalize.yml
+  ansible.builtin.include_tasks:
+    file: "DBU_normalize.yml"
+
+- name: Copy SSH PUB key except SBC
+  ansible.posix.authorized_key:                                                                                                                                                    
+    user: "{{ user_id }}"
+    state: present
+    key: "{{ lookup('file', '/root/.ssh/id_rsa.pub') }}"
+  failed_when: >
+    ( 'sbc' in ansible_facts['hostname'] )
+  notify:
+  - Edit sudoers
+  - sshd_restart

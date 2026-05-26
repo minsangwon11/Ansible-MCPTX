@@ -1,0 +1,5 @@
+# Purpose: Change the systems' IP address
+
+# cmd: ansible-playbook --vault-id @prompt execute.yml -e hosts=localhost
+
+# vault passwd: ip-cfg

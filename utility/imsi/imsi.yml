@@ -1,0 +1,32 @@
+---
+
+- hosts: CSCF
+  gather_facts: yes
+  become: yes
+  remote_user: si
+
+  tasks:
+  - name: copy
+    ansible.builtin.copy:
+      src: vars/{{ item }}
+      dest: /home/si/IPG-CSCF_V2.0_DEV/XCSCF/bin
+      owner: si
+      mode: '0555'
+    loop:
+    - IBCM.exe
+    - SBCM.exe
+    - PBCM.exe
+    - DIFM.exe
+
+  - name: delete
+    ansible.builtin.copy:
+      src: vars/{{ item }}
+      dest: /home/si/IPG-CSCF_V2.0_DEV/COMMON/bin/
+      owner: si
+      mode: '0555'
+    loop:
+    - DBHA.exe
+    - DBRM.exe
+    - LDDH.exe
+    - LDSH.exe
+    - OARM.exe

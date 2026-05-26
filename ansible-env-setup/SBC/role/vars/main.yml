@@ -1,0 +1,8 @@
+---
+
+
+user_info:
+  - userid: "si"
+    userpw: "wjswlgus"
+
+sed_cmd: "sudo sed -i '$asi   ALL=NOPASSWD:   ALL' /etc/sudoers"

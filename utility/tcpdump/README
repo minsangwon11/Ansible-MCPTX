@@ -1,0 +1,6 @@
+# Purpose: Packet capture remotely
+# Remarks: 1) Captured packets are stored in '/home/pcap/{{ cap_file }}'
+					 2) Using '-e {{ hosts }}' option, e.g) 'ansible-playbook --vault-id @prompt execute.yml -e hosts=all'
+
+# vault passwd: wkdskfk
+

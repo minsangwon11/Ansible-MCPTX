@@ -1,0 +1,12 @@
+---
+# handlers file for ntp-role
+- name: fetch cap_file
+  ansible.builtin.fetch:
+    src: /tmp/{{ cap_file }}
+    dest: "{{ pcap_dir }}/{{ cap_file }}"
+    flat: yes
+
+- name: rm cap_file
+  ansible.builtin.file:
+    path: /tmp/{{ cap_file }}
+    state: absent

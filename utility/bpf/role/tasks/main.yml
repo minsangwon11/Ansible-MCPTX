@@ -1,0 +1,6 @@
+---
+
+- name: include copy.yml
+  ansible.builtin.include_tasks:
+    file: "copy.yml"
+

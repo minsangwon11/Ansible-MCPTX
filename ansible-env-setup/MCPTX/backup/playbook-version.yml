@@ -1,0 +1,16 @@
+# Copying ssh key of Ansible-Controller to the controlled-nodes
+# Using '-u root -k' options with this playbook
+# Before execution, Set your env var as: export ANSIBLE_HOST_KEY_CHECKING=False
+
+---
+- hosts: all
+  vars:
+    - user_id: si
+  tasks:
+  - name: Copy ssh key
+    ansible.posix.authorized_key:
+      user: "{{ user_id }}"
+      state: present
+      key: "{{ lookup('file', '/root/.ssh/id_rsa.pub') }}"
+    failed_when: >
+      ( 'sbc' in ansible_facts['hostname'] or 'dbu' in ansible facts['hostname'] )

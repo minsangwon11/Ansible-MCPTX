@@ -1,0 +1,11 @@
+---                                                                                                                                                                                         
+
+- name: Edit sudoers
+  ansible.builtin.shell:
+    cmd: "{{ sed_cmd }}"
+
+- name: sshd_restart
+  ansible.builtin.service:
+    name: sshd
+    state: restarted
+

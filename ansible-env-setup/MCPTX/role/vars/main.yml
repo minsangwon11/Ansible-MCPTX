@@ -1,0 +1,11 @@
+---
+# vars file for 
+
+user_id: si
+
+bash_files:
+  - .bashrc
+  - .bash_profile
+  - .bash_logout
+
+sed_cmd: "sudo sed -i '$asi   ALL=NOPASSWD:   ALL' /etc/sudoers"

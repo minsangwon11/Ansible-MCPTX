@@ -1,0 +1,7 @@
+---
+
+- name: Copy ssh key 
+  ansible.posix.authorized_key:
+    user: 'nts'
+    state: present
+    key: "{{ lookup('file', '/root/.ssh/id_rsa.pub') }}"

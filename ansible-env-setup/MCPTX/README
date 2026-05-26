@@ -1,0 +1,3 @@
+# Purpose: Allow SSH between manage-node and controlled-nodes
+# cmd: ansible-playbook --vault-id @prompt execute.yml -u root -k => $system_passwd
+# vault passwd: MCPTX

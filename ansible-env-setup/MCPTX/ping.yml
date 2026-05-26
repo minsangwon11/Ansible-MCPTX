@@ -1,0 +1,9 @@
+---
+- hosts: "{{ hosts }}"
+  remote_user: si
+  gather_facts: False
+  become: True
+  tasks:
+   - ansible.builtin.ping:
+     run_once: true
+

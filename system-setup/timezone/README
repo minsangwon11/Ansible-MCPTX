@@ -1,0 +1,3 @@
+# Purpose: MCPTX timezone selection
+# cmd: ansible-playbook --vault-id @prompt execute.yml
+# vault passwd: timezone

@@ -1,0 +1,49 @@
+---
+
+- name: ifconfig
+  ansible.builtin.shell:
+    cmd: ifconfig -a > /tmp/"{{ ansible_facts['hostname'] }}"_ifconfig.txt
+
+- name: os info
+  ansible.builtin.shell:
+    cmd: cat /etc/os* > /tmp/"{{ ansible_facts['hostname'] }}"_OS.txt
+  ignore_errors: yes
+  tags:
+  - all
+
+- name: mem info
+  ansible.builtin.shell:
+    cmd: free > /tmp/"{{ ansible_facts['hostname'] }}"_free.txt
+  tags:
+  - all
+  - mem
+
+- name: disk info
+  ansible.builtin.shell:
+    cmd: lsblk > /tmp/"{{ ansible_facts['hostname'] }}"_lsblk.txt
+  tags:
+  - all
+  - disk
+
+- name: cpu info
+  ansible.builtin.shell:
+    cmd: lscpu > /tmp/"{{ ansible_facts['hostname'] }}"_lscpu.txt
+  tags:
+  - all
+  - cpu
+
+- name: find-files
+  ansible.builtin.find:                                                                                                                                                                     
+    paths: /tmp
+    patterns: "{{ ansible_facts['hostname'] }}*"
+  register: found_files
+
+- name: fetch-files 
+  ansible.builtin.fetch: 
+    src: "{{ item.path }}" 
+    dest: ./system-info/{{ ansible_facts['hostname'] }}/
+    flat: yes 
+  loop: "{{ found_files.files }}" 
+
+  notify:
+  - rm-files

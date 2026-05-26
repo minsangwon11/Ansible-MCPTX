@@ -1,0 +1,12 @@
+---
+
+- name: checking condition of rpm existence
+  ansible.builtin.package_facts:
+    manager: auto
+
+### package_name is defined in vars/main.yml
+- name: chrony installation
+  ansible.builtin.yum:
+    name: "{{ package_name }}"
+    state: latest
+  when: "'chrony' not in ansible_facts['packages']"

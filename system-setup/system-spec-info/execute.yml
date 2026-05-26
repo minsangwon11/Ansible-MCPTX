@@ -1,0 +1,11 @@
+---
+- hosts: all
+  gather_facts: yes
+  become: yes
+  remote_user: si
+  
+  tasks:
+  - name: execute role
+    ansible.builtin.import_role:
+      name: role
+

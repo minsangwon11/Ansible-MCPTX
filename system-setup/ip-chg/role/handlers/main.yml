@@ -1,0 +1,7 @@
+---
+# handlers file for ntp-role
+
+- name: network-restart
+  ansible.builtin.service:
+    name: network
+    state: restarted

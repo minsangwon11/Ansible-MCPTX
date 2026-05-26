@@ -1,0 +1,21 @@
+---
+# handlers file for ntp-role
+#- name: find-files
+#  ansible.builtin.find:
+#    paths: /tmp
+#    patterns: "{{ ansible_facts['hostname'] }}*"
+#  register: found-files
+
+
+#- name: fetch-files
+#  ansible.builtin.fetch:
+#    src: "{{ item.path }}"
+#    dest: ../../system-info/
+#    flat: yes
+#  loop: "{{ found_files.files }}"
+
+- name: rm-files
+  ansible.builtin.file:
+    path: "{{ item.path }}"
+    state: absent
+  loop: "{{ found_files.files }}"

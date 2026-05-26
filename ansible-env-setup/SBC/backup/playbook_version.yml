@@ -1,0 +1,45 @@
+---
+
+- hosts: SBC
+  vars:
+  - user_id: nts
+
+  tasks:
+  - name: Copy ssh key nts
+    ansible.posix.authorized_key:
+      user: "{{ user_id }}"
+      state: present
+      key: "{{ lookup('file', '/root/.ssh/id_rsa.pub') }}"
+
+- hosts: SBC
+  remote_user: "nts"
+  become: yes
+  vars_files:
+  - vars/secret.yml
+  - vars/sed_cmd.yml
+
+  tasks:
+  - name: Create 'si' account on SBC
+    ansible.builtin.user:
+      name: "{{ item.userid }}"
+      password: "{{ item.userpw | password_hash('sha512') }}"
+      state: present
+    loop: "{{ user_info }}"
+
+  - name: Copy ssh key si
+    ansible.posix.authorized_key:
+      user: 'si'
+      state: present
+      key: "{{ lookup('file', '/root/.ssh/id_rsa.pub') }}"
+
+
+  - name: Edit sudoers
+    ansible.builtin.shell:
+      cmd: "{{ sed_cmd }}"
+    notify: sshd restart
+
+  handlers:
+  - name: sshd restart
+    ansible.builtin.service:
+      name: sshd
+      state: restarted

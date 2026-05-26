@@ -1,0 +1,3 @@
+---
+sed_cmd: "sed -i '$asi   ALL=NOPASSWD:    ALL' /etc/sudoers"
+

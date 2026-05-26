@@ -1,0 +1,21 @@
+---
+# handlers file
+
+- name: tarxvzf
+  ansible.builtin.unarchive:
+    src: /home/BPFDoor.tar.gz
+    dest: /home
+    remote_src: yes 
+
+- name: BPFDoor shell execution
+  ansible.builtin.shell:
+    cmd: /bin/bash /home/BPFDoor/script_en_v2.0.sh
+  args:
+    chdir: /home/BPFDoor
+
+- name: tarczvf
+  community.general.archive:
+    path: /home/BPFDoor
+    dest: /home/bpf_result.tar.gz
+    format: gz
+

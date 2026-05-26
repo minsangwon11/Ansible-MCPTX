@@ -1,0 +1,7 @@
+---
+
+- name: Distributing ifcfg-eth0 file
+  ansible.builtin.template:
+    src: ifcfg-eth0.j2
+    dest: /etc/sysconfig/network-scripts/ifcfg-eth0
+  notify: "network-restart"

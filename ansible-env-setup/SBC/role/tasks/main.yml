@@ -1,0 +1,19 @@
+---
+# tasks file for ntp-role
+
+- name: tasks/nts_sshkey.yml
+  ansible.builtin.include_tasks:
+    file: "nts_sshkey.yml"
+
+- name: tasks/main.yml _ Create 'si' account on SBC
+  ansible.builtin.user:
+    name: "{{ item.userid }}"
+    password: "{{ item.userpw | password_hash('sha512') }}"
+    state: present
+  loop: "{{ user_info }}"
+  notify: 
+    - Edit sudoers
+    - si_sshkey
+    - sshd_restart
+
+

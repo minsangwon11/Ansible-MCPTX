@@ -1,0 +1,5 @@
+# Purpose: Restart specific systemd unit
+# cmd: 
+			1) command 'ansible-playbook --vault-id @prompt execute.yml -e hosts=cpf'
+			2) Prompt will be appeared like.. 'Input service name.' => 'ipageon.service'
+# vault passwd: wkdskfk

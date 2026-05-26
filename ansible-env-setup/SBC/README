@@ -1,0 +1,7 @@
+# Purpose: Create 'si' account on SBC
+# Cause: Make able to access the Ansible engine to SBC
+# Make sure the option of 'ansible.cfg' shall be 'host_key_checking=False'
+
+
+# cmd: "ansible-playbook --vault-id @prompt execute -u nts -k"
+# vault-passwd: SBC

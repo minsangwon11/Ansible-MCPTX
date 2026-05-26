@@ -1,0 +1,29 @@
+---
+# tasks file for ntp-role
+- name: Packet capture start  tasks/main.yml
+  block:
+  - name: MCPTX system tcpdump {{ cap_file }}
+    ansible.builtin.command: "sudo tcpdump -i any -w /tmp/{{ cap_file }}"
+    async: 600 
+    poll: 0
+    failed_when: "'sbc' in ansible_facts['hostname'] or 'SBC' in ansible_facts['hostname']"
+
+  rescue:
+  - name: SBC tcpdump
+    ansible.builtin.command: "sudo tcpdump -i mrxtap -w /tmp/{{ cap_file }}"
+    async: 600 
+    poll: 0
+
+
+  always:
+  - name: Freeze FBI 
+    ansible.builtin.pause:
+      seconds: 600 
+      prompt: ""
+
+  - name: kill proc
+    ansible.builtin.command: "pkill tcpdump"
+
+    notify:
+    - fetch cap_file
+    - rm cap_file
