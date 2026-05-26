@@ -1,0 +1,38 @@
+roles : 1.1.1.1 | PATCH | Ensure cramfs kernel module is not available | Edit modprobe config
+roles : 1.1.1.1 | PATCH | Ensure cramfs kernel module is not available | blacklist
+roles : 1.1.1.2 | PATCH | Ensure freevxfs kernel module is not available | Edit modprobe config
+roles : 1.1.1.2 | PATCH | Ensure freevxfs kernel module is not available | blacklist
+roles : 1.1.1.3 | PATCH | Ensure hfs kernel module is not available | Edit modprobe config
+roles : 1.1.1.3 | PATCH | Ensure hfs kernel module is not available | blacklist
+roles : 1.1.1.4 | PATCH | Ensure hfsplus kernel module is not available | Edit modprobe config
+roles : 1.1.1.4 | PATCH | Ensure hfsplus kernel module is not available | blacklist
+roles : 1.1.1.5 | PATCH | Ensure jffs2 kernel module is not available | Edit modprobe config
+roles : 1.1.1.5 | PATCH | Ensure jffs2 kernel module is not available | blacklist
+roles : 1.1.1.8 | PATCH | Ensure usb-storage kernel module is not available | Edit modprobe config
+roles : 1.1.1.8 | PATCH | Ensure usb-storage kernel module is not available | blacklist
+roles : "1.1.2.2.2 | PATCH | Ensure nodev option set on /dev/shm partition
+1.1.2.2.3 | PATCH | Ensure nosuid option set on /dev/shm partition
+1.1.2.2.4 | PATCH | Ensure noexec option set on /dev/shm partition"
+
+roles : "1.1.2.3.2 | PATCH | Ensure nodev option set on /home partition
+ 1.1.2.3.3 | PATCH | Ensure nosuid option set on /home partition
+
+roles : 1.2.2 | PATCH | Ensure gpgcheck is globally activated | Update yum.repos
+roles : 1.3.2 | PATCH | Ensure permissions on bootloader config are configured | UEFI
+roles : 1.4.1 | PATCH | Ensure address space layout randomization (ASLR) is enabled
+roles : Ensure ptrace_scope is restricted | Set file
+roles : Ensure ptrace_scope is restricted | comment out other entry
+roles : 1.4.3 | PATCH | Ensure core dump backtraces are disabled
+roles : 1.4.4 | PATCH | Ensure core dump storage is disabled
+roles : 1.5.1.2 | PATCH | Ensure SELinux is not disabled in bootloader configuration
+roles : 1.5.1.3 | PATCH | Ensure SELinux policy is configured
+roles : 1.5.1.4 | PATCH | Ensure the SELinux mode is not disabled
+roles : 1.6.2 | PATCH | Ensure system wide crypto policy disables sha1 hash and signature support | crypto_file
+roles : 1.6.3 | PATCH | Ensure system wide crypto policy disables cbc for ssh | crypto_file
+roles : 1.6.4 | PATCH | Ensure system wide crypto policy disables cbc for ssh | crypto_file
+roles : 1.7.1 | PATCH | Ensure message of the day is configured properly
+roles : 1.7.2 | PATCH | Ensure local login warning banner is configured properly
+roles : 1.7.3 | PATCH | Ensure remote login warning banner is configured properly
+roles : POST | Warning a reboot required but skip option set
+roles : Create ansible facts directory
+roles : Create ansible facts file

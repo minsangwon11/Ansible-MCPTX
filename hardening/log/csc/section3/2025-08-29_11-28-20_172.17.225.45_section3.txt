@@ -1,0 +1,19 @@
+roles : 3.1.2 | AUDIT | Ensure wireless interfaces are disabled | Check if wifi is enabled
+roles : 3.1.2 | PATCH | Ensure wireless interfaces are disabled | Disable wifi if enabled
+roles : 3.3.1 | PATCH | Ensure IP forwarding is disabled | Disable IPv4 forwarding
+roles : 3.3.1 | PATCH | Ensure IP forwarding is disabled | Disable IPv6 forwarding
+roles : 3.3.2 | PATCH | Ensure packet redirect sending is disabled
+roles : 3.3.3 | PATCH | Ensure bogus ICMP responses are ignored
+roles : 3.3.4 | PATCH | Ensure broadcast ICMP requests are ignored
+roles : 3.3.5 | PATCH | Ensure ICMP redirects are not accepted | Set ICMP redirects IPv4
+roles : 3.3.5 | PATCH | Ensure ICMP redirects are not accepted | Set ICMP redirects IPv6
+roles : 3.3.6 | PATCH | Ensure secure ICMP redirects are not accepted
+roles : 3.3.7 | PATCH | Ensure Reverse Path Filtering is enabled
+roles : 3.3.8 | PATCH | Ensure source routed packets are not accepted | Set routed packets IPv4
+roles : 3.3.8 | PATCH | Ensure source routed packets are not accepted | Set routed packets IPv6
+roles : 3.3.9 | PATCH | Ensure suspicious packets are logged
+roles : 3.3.10 | PATCH | Ensure TCP SYN Cookies is enabled
+roles : 3.3.11 | PATCH | Ensure IPv6 router advertisements are not accepted
+roles : 3.4.1.2 | PATCH | Ensure a single firewall configuration utility is in use | firewalld
+roles : 3.4.1.2 | PATCH | Ensure a single firewall configuration utility is in use | firewalld started and enabled
+roles : 3.4.2.2 | PATCH | Ensure host based firewall loopback traffic is configured | add interface

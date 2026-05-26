@@ -1,0 +1,111 @@
+roles : 1.1.1.1 | PATCH | Ensure cramfs kernel module is not available | Edit modprobe config
+roles : 1.1.1.1 | PATCH | Ensure cramfs kernel module is not available | blacklist
+roles : 1.1.1.2 | PATCH | Ensure freevxfs kernel module is not available | Edit modprobe config
+roles : 1.1.1.2 | PATCH | Ensure freevxfs kernel module is not available | blacklist
+roles : 1.1.1.3 | PATCH | Ensure hfs kernel module is not available | Edit modprobe config
+roles : 1.1.1.3 | PATCH | Ensure hfs kernel module is not available | blacklist
+roles : 1.1.1.4 | PATCH | Ensure hfsplus kernel module is not available | Edit modprobe config
+roles : 1.1.1.4 | PATCH | Ensure hfsplus kernel module is not available | blacklist
+roles : 1.1.1.5 | PATCH | Ensure jffs2 kernel module is not available | Edit modprobe config
+roles : 1.1.1.5 | PATCH | Ensure jffs2 kernel module is not available | blacklist
+roles : 1.1.1.8 | PATCH | Ensure usb-storage kernel module is not available | Edit modprobe config
+roles : 1.1.1.8 | PATCH | Ensure usb-storage kernel module is not available | blacklist
+roles : "1.1.2.2.2 | PATCH | Ensure nodev option set on /dev/shm partition
+1.1.2.2.3 | PATCH | Ensure nosuid option set on /dev/shm partition
+1.1.2.2.4 | PATCH | Ensure noexec option set on /dev/shm partition"
+
+roles : "1.1.2.3.2 | PATCH | Ensure nodev option set on /home partition
+ 1.1.2.3.3 | PATCH | Ensure nosuid option set on /home partition
+
+roles : 1.2.2 | PATCH | Ensure gpgcheck is globally activated | Update yum.repos
+roles : 1.3.2 | PATCH | Ensure permissions on bootloader config are configured | UEFI
+roles : 1.4.1 | PATCH | Ensure address space layout randomization (ASLR) is enabled
+roles : Ensure ptrace_scope is restricted | Set file
+roles : Ensure ptrace_scope is restricted | comment out other entry
+roles : 1.4.3 | PATCH | Ensure core dump backtraces are disabled
+roles : 1.4.4 | PATCH | Ensure core dump storage is disabled
+roles : 1.5.1.2 | PATCH | Ensure SELinux is not disabled in bootloader configuration
+roles : 1.5.1.3 | PATCH | Ensure SELinux policy is configured
+roles : 1.5.1.4 | PATCH | Ensure the SELinux mode is not disabled
+roles : 1.6.2 | PATCH | Ensure system wide crypto policy disables sha1 hash and signature support | crypto_file
+roles : 1.6.3 | PATCH | Ensure system wide crypto policy disables cbc for ssh | crypto_file
+roles : 1.6.4 | PATCH | Ensure system wide crypto policy disables cbc for ssh | crypto_file
+roles : 1.7.1 | PATCH | Ensure message of the day is configured properly
+roles : 1.7.2 | PATCH | Ensure local login warning banner is configured properly
+roles : 1.7.3 | PATCH | Ensure remote login warning banner is configured properly
+roles : 2.1.2 | PATCH | Ensure chrony is configured
+roles : 2.1.3 | PATCH | Ensure chrony is not run as the root user
+roles : 2.2.5 | PATCH | Ensure dnsmasq server services are not in use | Remove package
+roles : 2.2.18 | PATCH | Ensure web server services are not in use | Remove httpd server
+roles : 2.2.18 | PATCH | Ensure web server services are not in use | Remove nginx server
+roles : 3.1.2 | AUDIT | Ensure wireless interfaces are disabled | Check if wifi is enabled
+roles : 3.1.2 | PATCH | Ensure wireless interfaces are disabled | Disable wifi if enabled
+roles : 3.3.1 | PATCH | Ensure IP forwarding is disabled | Disable IPv4 forwarding
+roles : 3.3.1 | PATCH | Ensure IP forwarding is disabled | Disable IPv6 forwarding
+roles : 3.3.2 | PATCH | Ensure packet redirect sending is disabled
+roles : 3.3.3 | PATCH | Ensure bogus ICMP responses are ignored
+roles : 3.3.4 | PATCH | Ensure broadcast ICMP requests are ignored
+roles : 3.3.5 | PATCH | Ensure ICMP redirects are not accepted | Set ICMP redirects IPv4
+roles : 3.3.5 | PATCH | Ensure ICMP redirects are not accepted | Set ICMP redirects IPv6
+roles : 3.3.6 | PATCH | Ensure secure ICMP redirects are not accepted
+roles : 3.3.7 | PATCH | Ensure Reverse Path Filtering is enabled
+roles : 3.3.8 | PATCH | Ensure source routed packets are not accepted | Set routed packets IPv4
+roles : 3.3.8 | PATCH | Ensure source routed packets are not accepted | Set routed packets IPv6
+roles : 3.3.9 | PATCH | Ensure suspicious packets are logged
+roles : 3.3.10 | PATCH | Ensure TCP SYN Cookies is enabled
+roles : 3.3.11 | PATCH | Ensure IPv6 router advertisements are not accepted
+roles : 3.4.1.2 | PATCH | Ensure a single firewall configuration utility is in use | firewalld
+roles : 3.4.1.2 | PATCH | Ensure a single firewall configuration utility is in use | firewalld started and enabled
+roles : 3.4.2.2 | PATCH | Ensure host based firewall loopback traffic is configured | add interface
+roles : 3.4.2.2 | PATCH | Ensure host based firewall loopback traffic is configured | add loopback rule
+roles : 4.1.1.2 | PATCH | Ensure permissions on /etc/crontab are configured
+roles : 4.1.1.3 | PATCH | Ensure permissions on /etc/cron.hourly are configured
+roles : 4.1.1.4 | PATCH | Ensure permissions on /etc/cron.daily are configured
+roles : 4.1.1.5 | PATCH | Ensure permissions on /etc/cron.weekly are configured
+roles : 4.1.1.6 | PATCH | Ensure permissions on /etc/cron.monthly are configured
+roles : 4.1.1.7 | PATCH | Ensure permissions on /etc/cron.d are configured
+roles : 4.1.1.8 | PATCH | Ensure cron is restricted to authorized users | Remove cron.deny
+roles : 4.1.1.8 | PATCH | Ensure cron is restricted to authorized users | Ensure cron.allow is restricted to authorized users
+roles : 4.1.2.1 | PATCH | Ensure at is restricted to authorized users | Remove at.deny
+roles : 4.1.2.1 | PATCH | Ensure at is restricted to authorized users | Ensure at.allow is restricted to authorized users
+roles : 4.2.2 | PATCH | Ensure permissions on SSH private host key files are configured | Set permissions on SSH private host keys
+roles : 4.2.5 | PATCH | Ensure SSH warning banner is configured
+roles : 4.2.6 | PATCH | Ensure sshd Ciphers are configured
+roles : 4.2.7 | PATCH | Ensure sshd ClientAliveInterval and ClientAliveCountMax are configured | Add line in sshd_config for ClientAliveInterval
+roles : 4.2.7 | PATCH | Ensure sshd ClientAliveInterval and ClientAliveCountMax are configured | Ensure SSH ClientAliveCountMax set to <= 3
+roles : 4.2.9 | PATCH | Ensure SSH HostbasedAuthentication is disabled
+roles : 4.2.10 | PATCH | Ensure SSH IgnoreRhosts is enabled
+roles : 4.2.11 | PATCH | Ensure sshd KexAlgorithms is configured
+roles : 4.2.12 | PATCH | Ensure sshd LoginGraceTime is configured
+roles : 4.2.13 | PATCH | Ensure sshd LogLevel is configured
+roles : 4.2.14 | PATCH | Ensure sshd MACs are configured
+roles : 4.2.15 | PATCH | Ensure sshd MaxAuthTries is configured
+roles : 4.2.16 | PATCH | Ensure sshd MaxSessions is configured
+roles : 4.2.17 | PATCH | Ensure sshd MaxStartups is configured
+roles : 4.2.18 | PATCH | Ensure SSH PermitEmptyPasswords is disabled
+roles : 4.2.19 | PATCH | Ensure sshd PermitRootLogin is disabled
+roles : 4.2.20 | PATCH | Ensure sshd PermitUserEnvironment is disabled
+roles : 4.3.2 | PATCH | Ensure sudo commands use pty
+roles : 4.3.3 | PATCH | Ensure sudo log file exists
+roles : 4.3.6 | PATCH | Ensure sudo authentication timeout is configured correctly | Set value if no results
+roles : 4.3.7 | PATCH | Ensure access to the su command is restricted | Ensure sugroup exists
+roles : 4.3.7 | PATCH | Ensure access to the su command is restricted | Setting pam_wheel to use_uid
+roles : 4.5.1.2 | PATCH | Ensure password expiration is 365 days or less | update login.defs
+roles : 4.5.1.3 | PATCH | Ensure password expiration warning days is 7 or more | set login.defs
+roles : 4.5.2.2 | PATCH | Ensure root user umask is configured
+roles : 4.5.2.3 | PATCH | | Ensure system accounts are secured | Set nologin
+roles : 4.5.2.3 | PATCH | | Ensure system accounts are secured | Lock accounts
+roles : 4.5.3.2 | PATCH | Ensure default user shell timeout is configured
+roles : 4.5.3.3 | PATCH | Ensure default user umask is configured
+roles : 5.1.1.3 | PATCH | Ensure journald is configured to send logs to rsyslog
+roles : 5.1.1.4 | PATCH | Ensure rsyslog default file permissions configured
+roles : 5.1.1.5 | PATCH | Ensure logging is configured | mail.* log setting
+roles : 5.1.1.5 | PATCH | Ensure logging is configured | Misc. log setting
+roles : 5.1.1.5 | PATCH | Ensure logging is configured | Local log settings
+roles : 5.1.1.5 | PATCH | Ensure logging is configured | Auth Settings
+roles : 5.1.1.5 | PATCH | Ensure logging is configured | Cron Settings
+roles : 5.1.2.3 | PATCH | Ensure journald is configured to compress large log files
+roles : 5.1.2.4 | PATCH | Ensure journald is configured to write logfiles to persistent disk
+roles : 5.1.3 | PATCH | Ensure logrotate is configured | conf files
+roles : 5.1.3 | PATCH | Ensure logrotate is configured | logrotate.conf
+roles : 5.1.4 | PATCH | Ensure access to all logfiles has been configured | change permissions else all 640

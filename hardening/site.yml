@@ -1,0 +1,8 @@
+---
+
+- name: Run RHEL8 CIS hardening
+  hosts: IPGAside
+  become: true
+  remote_user: si
+  roles:
+    - role: roles

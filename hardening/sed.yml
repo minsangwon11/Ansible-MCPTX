@@ -1,0 +1,13 @@
+---
+- hosts: "{{ hosts }}"
+  gather_facts: yes 
+  remote_user: si
+
+  vars:
+#    src_path: /home/si/ansible/utility/file/route-eth2
+    src_path: /etc/yum.repos.d/*
+  
+  tasks:
+  - name: sed 
+    ansible.builtin.shell:
+      cmd: sed -i -e 's/enabled=1/enabled=0/' {{ src_path }}

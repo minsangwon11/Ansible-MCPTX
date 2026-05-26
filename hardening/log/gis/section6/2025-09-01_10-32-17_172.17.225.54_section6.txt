@@ -1,0 +1,4 @@
+roles : 6.2.10 | PATCH | Ensure local interactive user home directories exist | Create dir if absent
+roles : 6.2.10 | PATCH | Ensure local interactive user home directories exist | Permissions
+roles : Create ansible facts directory
+roles : Create ansible facts file

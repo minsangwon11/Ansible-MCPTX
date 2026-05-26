@@ -1,0 +1,3165 @@
+{
+    "custom_stats": {},
+    "global_custom_stats": {},
+    "plays": [
+        {
+            "play": {
+                "duration": {
+                    "end": "2025-09-09T06:53:42.203878Z",
+                    "start": "2025-09-09T05:42:21.420166Z"
+                },
+                "id": "0050569b-499e-a067-bc04-000000000021",
+                "name": "Run RHEL8 CIS hardening",
+                "path": "/home/si/ansible/hardening/audit/site.yml:3"
+            },
+            "tasks": [
+                {
+                    "hosts": {
+                        "172.17.225.14": {
+                            "_ansible_no_log": false,
+                            "_ansible_verbose_override": true,
+                            "action": "gather_facts",
+                            "ansible_facts": {
+                                "ansible_all_ipv4_addresses": [
+                                    "172.17.227.14",
+                                    "172.17.226.14",
+                                    "172.17.225.14",
+                                    "172.17.225.13"
+                                ],
+                                "ansible_all_ipv6_addresses": [
+                                    "fe80::250:56ff:fe9b:9ace",
+                                    "fe80::250:56ff:fe9b:5392",
+                                    "fe80::250:56ff:fe9b:7287"
+                                ],
+                                "ansible_apparmor": {
+                                    "status": "disabled"
+                                },
+                                "ansible_architecture": "x86_64",
+                                "ansible_bios_date": "01/11/2023",
+                                "ansible_bios_vendor": "VMware, Inc.",
+                                "ansible_bios_version": "VMW71.00V.21100432.B64.2301110304",
+                                "ansible_board_asset_tag": "NA",
+                                "ansible_board_name": "440BX Desktop Reference Platform",
+                                "ansible_board_serial": "None",
+                                "ansible_board_vendor": "Intel Corporation",
+                                "ansible_board_version": "None",
+                                "ansible_chassis_asset_tag": "No Asset Tag",
+                                "ansible_chassis_serial": "None",
+                                "ansible_chassis_vendor": "No Enclosure",
+                                "ansible_chassis_version": "N/A",
+                                "ansible_cmdline": {
+                                    "BOOT_IMAGE": "(hd0,gpt3)/boot/vmlinuz-4.18.0-553.el8_10.x86_64",
+                                    "net.ifnames": "0",
+                                    "quiet": true,
+                                    "resume": "UUID=c46b34c4-c52e-41ba-b852-b083a8a4a0c4",
+                                    "rhgb": true,
+                                    "ro": true,
+                                    "root": "UUID=a9e7ad52-1127-48d2-8612-b8e480052027",
+                                    "selinux": "0"
+                                },
+                                "ansible_date_time": {
+                                    "date": "2025-09-09",
+                                    "day": "09",
+                                    "epoch": "1757396563",
+                                    "epoch_int": "1757396563",
+                                    "hour": "13",
+                                    "iso8601": "2025-09-09T05:42:43Z",
+                                    "iso8601_basic": "20250909T134243328175",
+                                    "iso8601_basic_short": "20250909T134243",
+                                    "iso8601_micro": "2025-09-09T05:42:43.328175Z",
+                                    "minute": "42",
+                                    "month": "09",
+                                    "second": "43",
+                                    "time": "13:42:43",
+                                    "tz": "+08",
+                                    "tz_dst": "+08",
+                                    "tz_offset": "+0800",
+                                    "weekday": "Tuesday",
+                                    "weekday_number": "2",
+                                    "weeknumber": "36",
+                                    "year": "2025"
+                                },
+                                "ansible_default_ipv4": {
+                                    "address": "172.17.225.14",
+                                    "alias": "eth0",
+                                    "broadcast": "172.17.225.127",
+                                    "gateway": "172.17.225.1",
+                                    "interface": "eth0",
+                                    "macaddress": "00:50:56:9b:72:87",
+                                    "mtu": 1500,
+                                    "netmask": "255.255.255.128",
+                                    "network": "172.17.225.0",
+                                    "prefix": "25",
+                                    "type": "ether"
+                                },
+                                "ansible_default_ipv6": {},
+                                "ansible_device_links": {
+                                    "ids": {
+                                        "sr0": [
+                                            "ata-VMware_Virtual_SATA_CDRW_Drive_00000000000000000001"
+                                        ]
+                                    },
+                                    "labels": {
+                                        "sr0": [
+                                            "RHEL-8-10-0-BaseOS-x86_64"
+                                        ]
+                                    },
+                                    "masters": {},
+                                    "uuids": {
+                                        "sda1": [
+                                            "D027-51C9"
+                                        ],
+                                        "sda2": [
+                                            "c46b34c4-c52e-41ba-b852-b083a8a4a0c4"
+                                        ],
+                                        "sda3": [
+                                            "a9e7ad52-1127-48d2-8612-b8e480052027"
+                                        ],
+                                        "sr0": [
+                                            "2024-05-16-03-31-17-00"
+                                        ]
+                                    }
+                                },
+                                "ansible_devices": {
+                                    "sda": {
+                                        "holders": [],
+                                        "host": "Serial Attached SCSI controller: VMware PVSCSI SCSI Controller (rev 02)",
+                                        "links": {
+                                            "ids": [],
+                                            "labels": [],
+                                            "masters": [],
+                                            "uuids": []
+                                        },
+                                        "model": "Virtual disk",
+                                        "partitions": {
+                                            "sda1": {
+                                                "holders": [],
+                                                "links": {
+                                                    "ids": [],
+                                                    "labels": [],
+                                                    "masters": [],
+                                                    "uuids": [
+                                                        "D027-51C9"
+                                                    ]
+                                                },
+                                                "sectors": "2097152",
+                                                "sectorsize": 512,
+                                                "size": "1.00 GB",
+                                                "start": "2048",
+                                                "uuid": "D027-51C9"
+                                            },
+                                            "sda2": {
+                                                "holders": [],
+                                                "links": {
+                                                    "ids": [],
+                                                    "labels": [],
+                                                    "masters": [],
+                                                    "uuids": [
+                                                        "c46b34c4-c52e-41ba-b852-b083a8a4a0c4"
+                                                    ]
+                                                },
+                                                "sectors": "4194304",
+                                                "sectorsize": 512,
+                                                "size": "2.00 GB",
+                                                "start": "2099200",
+                                                "uuid": "c46b34c4-c52e-41ba-b852-b083a8a4a0c4"
+                                            },
+                                            "sda3": {
+                                                "holders": [],
+                                                "links": {
+                                                    "ids": [],
+                                                    "labels": [],
+                                                    "masters": [],
+                                                    "uuids": [
+                                                        "a9e7ad52-1127-48d2-8612-b8e480052027"
+                                                    ]
+                                                },
+                                                "sectors": "1067446272",
+                                                "sectorsize": 512,
+                                                "size": "509.00 GB",
+                                                "start": "6293504",
+                                                "uuid": "a9e7ad52-1127-48d2-8612-b8e480052027"
+                                            }
+                                        },
+                                        "removable": "0",
+                                        "rotational": "1",
+                                        "sas_address": null,
+                                        "sas_device_handle": null,
+                                        "scheduler_mode": "mq-deadline",
+                                        "sectors": "1073741824",
+                                        "sectorsize": "512",
+                                        "size": "512.00 GB",
+                                        "support_discard": "1048576",
+                                        "vendor": "VMware",
+                                        "virtual": 1
+                                    },
+                                    "sr0": {
+                                        "holders": [],
+                                        "host": "SATA controller: VMware SATA AHCI controller",
+                                        "links": {
+                                            "ids": [
+                                                "ata-VMware_Virtual_SATA_CDRW_Drive_00000000000000000001"
+                                            ],
+                                            "labels": [
+                                                "RHEL-8-10-0-BaseOS-x86_64"
+                                            ],
+                                            "masters": [],
+                                            "uuids": [
+                                                "2024-05-16-03-31-17-00"
+                                            ]
+                                        },
+                                        "model": "VMware SATA CD00",
+                                        "partitions": {},
+                                        "removable": "1",
+                                        "rotational": "1",
+                                        "sas_address": null,
+                                        "sas_device_handle": null,
+                                        "scheduler_mode": "mq-deadline",
+                                        "sectors": "27801600",
+                                        "sectorsize": "2048",
+                                        "size": "13.26 GB",
+                                        "support_discard": "0",
+                                        "vendor": "NECVMWar",
+                                        "virtual": 1
+                                    }
+                                },
+                                "ansible_distribution": "RedHat",
+                                "ansible_distribution_file_parsed": true,
+                                "ansible_distribution_file_path": "/etc/redhat-release",
+                                "ansible_distribution_file_search_string": "Red Hat",
+                                "ansible_distribution_file_variety": "RedHat",
+                                "ansible_distribution_major_version": "8",
+                                "ansible_distribution_release": "Ootpa",
+                                "ansible_distribution_version": "8.10",
+                                "ansible_dns": {
+                                    "nameservers": [
+                                        "8.8.8.8"
+                                    ]
+                                },
+                                "ansible_domain": "",
+                                "ansible_effective_group_id": 0,
+                                "ansible_effective_user_id": 0,
+                                "ansible_env": {
+                                    "HOME": "/root",
+                                    "LANG": "en_US.UTF-8",
+                                    "LOGNAME": "root",
+                                    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;05;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.m4a=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.oga=01;36:*.opus=01;36:*.spx=01;36:*.xspf=01;36:",
+                                    "MAIL": "/var/mail/root",
+                                    "PATH": "/sbin:/bin:/usr/sbin:/usr/bin",
+                                    "PWD": "/home/si",
+                                    "SHELL": "/bin/bash",
+                                    "SHLVL": "1",
+                                    "SUDO_COMMAND": "/bin/bash -c echo BECOME-SUCCESS-bmjlkoxgvsrmkndrcpdtjqekvmhkaryr ; /usr/libexec/platform-python /home/si/.ansible/tmp/ansible-tmp-1757396541.990272-263142-35233883135244/AnsiballZ_setup.py",
+                                    "SUDO_GID": "1001",
+                                    "SUDO_UID": "1001",
+                                    "SUDO_USER": "si",
+                                    "TERM": "linux",
+                                    "USER": "root",
+                                    "_": "/usr/libexec/platform-python"
+                                },
+                                "ansible_eth0": {
+                                    "active": true,
+                                    "device": "eth0",
+                                    "features": {
+                                        "esp_hw_offload": "off [fixed]",
+                                        "esp_tx_csum_hw_offload": "off [fixed]",
+                                        "fcoe_mtu": "off [fixed]",
+                                        "generic_receive_offload": "on",
+                                        "generic_segmentation_offload": "on",
+                                        "highdma": "on",
+                                        "hw_tc_offload": "off [fixed]",
+                                        "l2_fwd_offload": "off [fixed]",
+                                        "large_receive_offload": "on",
+                                        "loopback": "off [fixed]",
+                                        "netns_local": "off [fixed]",
+                                        "ntuple_filters": "off [fixed]",
+                                        "receive_hashing": "on",
+                                        "rx_all": "off [fixed]",
+                                        "rx_checksumming": "on",
+                                        "rx_fcs": "off [fixed]",
+                                        "rx_gro_hw": "off [fixed]",
+                                        "rx_gro_list": "off",
+                                        "rx_udp_gro_forwarding": "off",
+                                        "rx_udp_tunnel_port_offload": "off [fixed]",
+                                        "rx_vlan_filter": "on [fixed]",
+                                        "rx_vlan_offload": "on",
+                                        "rx_vlan_stag_filter": "off [fixed]",
+                                        "rx_vlan_stag_hw_parse": "off [fixed]",
+                                        "scatter_gather": "on",
+                                        "tcp_segmentation_offload": "on",
+                                        "tls_hw_record": "off [fixed]",
+                                        "tls_hw_rx_offload": "off [fixed]",
+                                        "tls_hw_tx_offload": "off [fixed]",
+                                        "tx_checksum_fcoe_crc": "off [fixed]",
+                                        "tx_checksum_ip_generic": "on",
+                                        "tx_checksum_ipv4": "off [fixed]",
+                                        "tx_checksum_ipv6": "off [fixed]",
+                                        "tx_checksum_sctp": "off [fixed]",
+                                        "tx_checksumming": "on",
+                                        "tx_esp_segmentation": "off [fixed]",
+                                        "tx_fcoe_segmentation": "off [fixed]",
+                                        "tx_gre_csum_segmentation": "off [fixed]",
+                                        "tx_gre_segmentation": "off [fixed]",
+                                        "tx_gso_list": "off [fixed]",
+                                        "tx_gso_partial": "off [fixed]",
+                                        "tx_gso_robust": "off [fixed]",
+                                        "tx_ipxip4_segmentation": "off [fixed]",
+                                        "tx_ipxip6_segmentation": "off [fixed]",
+                                        "tx_lockless": "off [fixed]",
+                                        "tx_nocache_copy": "off",
+                                        "tx_scatter_gather": "on",
+                                        "tx_scatter_gather_fraglist": "off [fixed]",
+                                        "tx_sctp_segmentation": "off [fixed]",
+                                        "tx_tcp6_segmentation": "on",
+                                        "tx_tcp_ecn_segmentation": "off [fixed]",
+                                        "tx_tcp_mangleid_segmentation": "off",
+                                        "tx_tcp_segmentation": "on",
+                                        "tx_tunnel_remcsum_segmentation": "off [fixed]",
+                                        "tx_udp_segmentation": "off [fixed]",
+                                        "tx_udp_tnl_csum_segmentation": "off",
+                                        "tx_udp_tnl_segmentation": "off",
+                                        "tx_vlan_offload": "on",
+                                        "tx_vlan_stag_hw_insert": "off [fixed]",
+                                        "vlan_challenged": "off [fixed]"
+                                    },
+                                    "hw_timestamp_filters": [],
+                                    "ipv4": {
+                                        "address": "172.17.225.14",
+                                        "broadcast": "172.17.225.127",
+                                        "netmask": "255.255.255.128",
+                                        "network": "172.17.225.0",
+                                        "prefix": "25"
+                                    },
+                                    "ipv4_secondaries": [
+                                        {
+                                            "address": "172.17.225.13",
+                                            "broadcast": "172.17.225.127",
+                                            "netmask": "255.255.255.128",
+                                            "network": "172.17.225.0",
+                                            "prefix": "25"
+                                        }
+                                    ],
+                                    "ipv6": [
+                                        {
+                                            "address": "fe80::250:56ff:fe9b:7287",
+                                            "prefix": "64",
+                                            "scope": "link"
+                                        }
+                                    ],
+                                    "macaddress": "00:50:56:9b:72:87",
+                                    "module": "vmxnet3",
+                                    "mtu": 1500,
+                                    "pciid": "0000:0b:00.0",
+                                    "promisc": false,
+                                    "speed": 10000,
+                                    "timestamping": [],
+                                    "type": "ether"
+                                },
+                                "ansible_eth0_0": {
+                                    "ipv4_secondaries": [
+                                        {
+                                            "address": "172.17.225.13",
+                                            "broadcast": "172.17.225.127",
+                                            "netmask": "255.255.255.128",
+                                            "network": "172.17.225.0",
+                                            "prefix": "25"
+                                        }
+                                    ]
+                                },
+                                "ansible_eth1": {
+                                    "active": true,
+                                    "device": "eth1",
+                                    "features": {
+                                        "esp_hw_offload": "off [fixed]",
+                                        "esp_tx_csum_hw_offload": "off [fixed]",
+                                        "fcoe_mtu": "off [fixed]",
+                                        "generic_receive_offload": "on",
+                                        "generic_segmentation_offload": "on",
+                                        "highdma": "on",
+                                        "hw_tc_offload": "off [fixed]",
+                                        "l2_fwd_offload": "off [fixed]",
+                                        "large_receive_offload": "on",
+                                        "loopback": "off [fixed]",
+                                        "netns_local": "off [fixed]",
+                                        "ntuple_filters": "off [fixed]",
+                                        "receive_hashing": "on",
+                                        "rx_all": "off [fixed]",
+                                        "rx_checksumming": "on",
+                                        "rx_fcs": "off [fixed]",
+                                        "rx_gro_hw": "off [fixed]",
+                                        "rx_gro_list": "off",
+                                        "rx_udp_gro_forwarding": "off",
+                                        "rx_udp_tunnel_port_offload": "off [fixed]",
+                                        "rx_vlan_filter": "on [fixed]",
+                                        "rx_vlan_offload": "on",
+                                        "rx_vlan_stag_filter": "off [fixed]",
+                                        "rx_vlan_stag_hw_parse": "off [fixed]",
+                                        "scatter_gather": "on",
+                                        "tcp_segmentation_offload": "on",
+                                        "tls_hw_record": "off [fixed]",
+                                        "tls_hw_rx_offload": "off [fixed]",
+                                        "tls_hw_tx_offload": "off [fixed]",
+                                        "tx_checksum_fcoe_crc": "off [fixed]",
+                                        "tx_checksum_ip_generic": "on",
+                                        "tx_checksum_ipv4": "off [fixed]",
+                                        "tx_checksum_ipv6": "off [fixed]",
+                                        "tx_checksum_sctp": "off [fixed]",
+                                        "tx_checksumming": "on",
+                                        "tx_esp_segmentation": "off [fixed]",
+                                        "tx_fcoe_segmentation": "off [fixed]",
+                                        "tx_gre_csum_segmentation": "off [fixed]",
+                                        "tx_gre_segmentation": "off [fixed]",
+                                        "tx_gso_list": "off [fixed]",
+                                        "tx_gso_partial": "off [fixed]",
+                                        "tx_gso_robust": "off [fixed]",
+                                        "tx_ipxip4_segmentation": "off [fixed]",
+                                        "tx_ipxip6_segmentation": "off [fixed]",
+                                        "tx_lockless": "off [fixed]",
+                                        "tx_nocache_copy": "off",
+                                        "tx_scatter_gather": "on",
+                                        "tx_scatter_gather_fraglist": "off [fixed]",
+                                        "tx_sctp_segmentation": "off [fixed]",
+                                        "tx_tcp6_segmentation": "on",
+                                        "tx_tcp_ecn_segmentation": "off [fixed]",
+                                        "tx_tcp_mangleid_segmentation": "off",
+                                        "tx_tcp_segmentation": "on",
+                                        "tx_tunnel_remcsum_segmentation": "off [fixed]",
+                                        "tx_udp_segmentation": "off [fixed]",
+                                        "tx_udp_tnl_csum_segmentation": "off",
+                                        "tx_udp_tnl_segmentation": "off",
+                                        "tx_vlan_offload": "on",
+                                        "tx_vlan_stag_hw_insert": "off [fixed]",
+                                        "vlan_challenged": "off [fixed]"
+                                    },
+                                    "hw_timestamp_filters": [],
+                                    "ipv4": {
+                                        "address": "172.17.227.14",
+                                        "broadcast": "172.17.227.63",
+                                        "netmask": "255.255.255.192",
+                                        "network": "172.17.227.0",
+                                        "prefix": "26"
+                                    },
+                                    "ipv6": [
+                                        {
+                                            "address": "fe80::250:56ff:fe9b:9ace",
+                                            "prefix": "64",
+                                            "scope": "link"
+                                        }
+                                    ],
+                                    "macaddress": "00:50:56:9b:9a:ce",
+                                    "module": "vmxnet3",
+                                    "mtu": 1500,
+                                    "pciid": "0000:13:00.0",
+                                    "promisc": false,
+                                    "speed": 10000,
+                                    "timestamping": [],
+                                    "type": "ether"
+                                },
+                                "ansible_eth2": {
+                                    "active": true,
+                                    "device": "eth2",
+                                    "features": {
+                                        "esp_hw_offload": "off [fixed]",
+                                        "esp_tx_csum_hw_offload": "off [fixed]",
+                                        "fcoe_mtu": "off [fixed]",
+                                        "generic_receive_offload": "on",
+                                        "generic_segmentation_offload": "on",
+                                        "highdma": "on",
+                                        "hw_tc_offload": "off [fixed]",
+                                        "l2_fwd_offload": "off [fixed]",
+                                        "large_receive_offload": "on",
+                                        "loopback": "off [fixed]",
+                                        "netns_local": "off [fixed]",
+                                        "ntuple_filters": "off [fixed]",
+                                        "receive_hashing": "on",
+                                        "rx_all": "off [fixed]",
+                                        "rx_checksumming": "on",
+                                        "rx_fcs": "off [fixed]",
+                                        "rx_gro_hw": "off [fixed]",
+                                        "rx_gro_list": "off",
+                                        "rx_udp_gro_forwarding": "off",
+                                        "rx_udp_tunnel_port_offload": "off [fixed]",
+                                        "rx_vlan_filter": "on [fixed]",
+                                        "rx_vlan_offload": "on",
+                                        "rx_vlan_stag_filter": "off [fixed]",
+                                        "rx_vlan_stag_hw_parse": "off [fixed]",
+                                        "scatter_gather": "on",
+                                        "tcp_segmentation_offload": "on",
+                                        "tls_hw_record": "off [fixed]",
+                                        "tls_hw_rx_offload": "off [fixed]",
+                                        "tls_hw_tx_offload": "off [fixed]",
+                                        "tx_checksum_fcoe_crc": "off [fixed]",
+                                        "tx_checksum_ip_generic": "on",
+                                        "tx_checksum_ipv4": "off [fixed]",
+                                        "tx_checksum_ipv6": "off [fixed]",
+                                        "tx_checksum_sctp": "off [fixed]",
+                                        "tx_checksumming": "on",
+                                        "tx_esp_segmentation": "off [fixed]",
+                                        "tx_fcoe_segmentation": "off [fixed]",
+                                        "tx_gre_csum_segmentation": "off [fixed]",
+                                        "tx_gre_segmentation": "off [fixed]",
+                                        "tx_gso_list": "off [fixed]",
+                                        "tx_gso_partial": "off [fixed]",
+                                        "tx_gso_robust": "off [fixed]",
+                                        "tx_ipxip4_segmentation": "off [fixed]",
+                                        "tx_ipxip6_segmentation": "off [fixed]",
+                                        "tx_lockless": "off [fixed]",
+                                        "tx_nocache_copy": "off",
+                                        "tx_scatter_gather": "on",
+                                        "tx_scatter_gather_fraglist": "off [fixed]",
+                                        "tx_sctp_segmentation": "off [fixed]",
+                                        "tx_tcp6_segmentation": "on",
+                                        "tx_tcp_ecn_segmentation": "off [fixed]",
+                                        "tx_tcp_mangleid_segmentation": "off",
+                                        "tx_tcp_segmentation": "on",
+                                        "tx_tunnel_remcsum_segmentation": "off [fixed]",
+                                        "tx_udp_segmentation": "off [fixed]",
+                                        "tx_udp_tnl_csum_segmentation": "off",
+                                        "tx_udp_tnl_segmentation": "off",
+                                        "tx_vlan_offload": "on",
+                                        "tx_vlan_stag_hw_insert": "off [fixed]",
+                                        "vlan_challenged": "off [fixed]"
+                                    },
+                                    "hw_timestamp_filters": [],
+                                    "ipv4": {
+                                        "address": "172.17.226.14",
+                                        "broadcast": "172.17.226.127",
+                                        "netmask": "255.255.255.128",
+                                        "network": "172.17.226.0",
+                                        "prefix": "25"
+                                    },
+                                    "ipv6": [
+                                        {
+                                            "address": "fe80::250:56ff:fe9b:5392",
+                                            "prefix": "64",
+                                            "scope": "link"
+                                        }
+                                    ],
+                                    "macaddress": "00:50:56:9b:53:92",
+                                    "module": "vmxnet3",
+                                    "mtu": 1500,
+                                    "pciid": "0000:1b:00.0",
+                                    "promisc": false,
+                                    "speed": 10000,
+                                    "timestamping": [],
+                                    "type": "ether"
+                                },
+                                "ansible_fibre_channel_wwn": [],
+                                "ansible_fips": false,
+                                "ansible_form_factor": "Other",
+                                "ansible_fqdn": "R15-olp-sbcems1-01",
+                                "ansible_hostname": "R15-olp-sbcems1-01",
+                                "ansible_hostnqn": "nqn.2014-08.org.nvmexpress:uuid:4dc34d56-f6fe-5dec-a848-056214cf5f5e",
+                                "ansible_interfaces": [
+                                    "eth1",
+                                    "eth2",
+                                    "eth0",
+                                    "lo",
+                                    "eth0_0"
+                                ],
+                                "ansible_is_chroot": false,
+                                "ansible_iscsi_iqn": "iqn.1994-05.com.redhat:e5de3d2418eb",
+                                "ansible_kernel": "4.18.0-553.el8_10.x86_64",
+                                "ansible_kernel_version": "#1 SMP Fri May 10 15:19:13 EDT 2024",
+                                "ansible_lo": {
+                                    "active": true,
+                                    "device": "lo",
+                                    "features": {
+                                        "esp_hw_offload": "off [fixed]",
+                                        "esp_tx_csum_hw_offload": "off [fixed]",
+                                        "fcoe_mtu": "off [fixed]",
+                                        "generic_receive_offload": "on",
+                                        "generic_segmentation_offload": "on",
+                                        "highdma": "on [fixed]",
+                                        "hw_tc_offload": "off [fixed]",
+                                        "l2_fwd_offload": "off [fixed]",
+                                        "large_receive_offload": "off [fixed]",
+                                        "loopback": "on [fixed]",
+                                        "netns_local": "on [fixed]",
+                                        "ntuple_filters": "off [fixed]",
+                                        "receive_hashing": "off [fixed]",
+                                        "rx_all": "off [fixed]",
+                                        "rx_checksumming": "on [fixed]",
+                                        "rx_fcs": "off [fixed]",
+                                        "rx_gro_hw": "off [fixed]",
+                                        "rx_gro_list": "off",
+                                        "rx_udp_gro_forwarding": "off",
+                                        "rx_udp_tunnel_port_offload": "off [fixed]",
+                                        "rx_vlan_filter": "off [fixed]",
+                                        "rx_vlan_offload": "off [fixed]",
+                                        "rx_vlan_stag_filter": "off [fixed]",
+                                        "rx_vlan_stag_hw_parse": "off [fixed]",
+                                        "scatter_gather": "on",
+                                        "tcp_segmentation_offload": "on",
+                                        "tls_hw_record": "off [fixed]",
+                                        "tls_hw_rx_offload": "off [fixed]",
+                                        "tls_hw_tx_offload": "off [fixed]",
+                                        "tx_checksum_fcoe_crc": "off [fixed]",
+                                        "tx_checksum_ip_generic": "on [fixed]",
+                                        "tx_checksum_ipv4": "off [fixed]",
+                                        "tx_checksum_ipv6": "off [fixed]",
+                                        "tx_checksum_sctp": "on [fixed]",
+                                        "tx_checksumming": "on",
+                                        "tx_esp_segmentation": "off [fixed]",
+                                        "tx_fcoe_segmentation": "off [fixed]",
+                                        "tx_gre_csum_segmentation": "off [fixed]",
+                                        "tx_gre_segmentation": "off [fixed]",
+                                        "tx_gso_list": "on",
+                                        "tx_gso_partial": "off [fixed]",
+                                        "tx_gso_robust": "off [fixed]",
+                                        "tx_ipxip4_segmentation": "off [fixed]",
+                                        "tx_ipxip6_segmentation": "off [fixed]",
+                                        "tx_lockless": "on [fixed]",
+                                        "tx_nocache_copy": "off [fixed]",
+                                        "tx_scatter_gather": "on [fixed]",
+                                        "tx_scatter_gather_fraglist": "on [fixed]",
+                                        "tx_sctp_segmentation": "on",
+                                        "tx_tcp6_segmentation": "on",
+                                        "tx_tcp_ecn_segmentation": "on",
+                                        "tx_tcp_mangleid_segmentation": "on",
+                                        "tx_tcp_segmentation": "on",
+                                        "tx_tunnel_remcsum_segmentation": "off [fixed]",
+                                        "tx_udp_segmentation": "on",
+                                        "tx_udp_tnl_csum_segmentation": "off [fixed]",
+                                        "tx_udp_tnl_segmentation": "off [fixed]",
+                                        "tx_vlan_offload": "off [fixed]",
+                                        "tx_vlan_stag_hw_insert": "off [fixed]",
+                                        "vlan_challenged": "on [fixed]"
+                                    },
+                                    "hw_timestamp_filters": [],
+                                    "ipv4": {
+                                        "address": "127.0.0.1",
+                                        "broadcast": "",
+                                        "netmask": "255.0.0.0",
+                                        "network": "127.0.0.0",
+                                        "prefix": "8"
+                                    },
+                                    "ipv6": [
+                                        {
+                                            "address": "::1",
+                                            "prefix": "128",
+                                            "scope": "host"
+                                        }
+                                    ],
+                                    "mtu": 65536,
+                                    "promisc": false,
+                                    "timestamping": [],
+                                    "type": "loopback"
+                                },
+                                "ansible_loadavg": {
+                                    "15m": 0.24,
+                                    "1m": 0.33,
+                                    "5m": 0.28
+                                },
+                                "ansible_local": {},
+                                "ansible_locally_reachable_ips": {
+                                    "ipv4": [
+                                        "127.0.0.0/8",
+                                        "127.0.0.1",
+                                        "172.17.225.13",
+                                        "172.17.225.14",
+                                        "172.17.226.14",
+                                        "172.17.227.14"
+                                    ],
+                                    "ipv6": [
+                                        "::1",
+                                        "fe80::250:56ff:fe9b:5392",
+                                        "fe80::250:56ff:fe9b:7287",
+                                        "fe80::250:56ff:fe9b:9ace"
+                                    ]
+                                },
+                                "ansible_lsb": {},
+                                "ansible_lvm": {
+                                    "lvs": {},
+                                    "pvs": {},
+                                    "vgs": {}
+                                },
+                                "ansible_machine": "x86_64",
+                                "ansible_machine_id": "ab9a5e1bb283408d8858efbc29ec3d40",
+                                "ansible_memfree_mb": 1727,
+                                "ansible_memory_mb": {
+                                    "nocache": {
+                                        "free": 13566,
+                                        "used": 2450
+                                    },
+                                    "real": {
+                                        "free": 1727,
+                                        "total": 16016,
+                                        "used": 14289
+                                    },
+                                    "swap": {
+                                        "cached": 19,
+                                        "free": 1740,
+                                        "total": 2047,
+                                        "used": 307
+                                    }
+                                },
+                                "ansible_memtotal_mb": 16016,
+                                "ansible_mounts": [
+                                    {
+                                        "block_available": 121917212,
+                                        "block_size": 4096,
+                                        "block_total": 133365633,
+                                        "block_used": 11448421,
+                                        "device": "/dev/sda3",
+                                        "fstype": "xfs",
+                                        "inode_available": 266667011,
+                                        "inode_total": 266861568,
+                                        "inode_used": 194557,
+                                        "mount": "/",
+                                        "options": "rw,relatime,attr2,inode64,logbufs=8,logbsize=32k,noquota",
+                                        "size_available": 499372900352,
+                                        "size_total": 546265632768,
+                                        "uuid": "a9e7ad52-1127-48d2-8612-b8e480052027"
+                                    },
+                                    {
+                                        "block_available": 260143,
+                                        "block_size": 4096,
+                                        "block_total": 261628,
+                                        "block_used": 1485,
+                                        "device": "/dev/sda1",
+                                        "fstype": "vfat",
+                                        "inode_available": 0,
+                                        "inode_total": 0,
+                                        "inode_used": 0,
+                                        "mount": "/boot/efi",
+                                        "options": "rw,relatime,fmask=0077,dmask=0077,codepage=437,iocharset=ascii,shortname=winnt,errors=remount-ro",
+                                        "size_available": 1065545728,
+                                        "size_total": 1071628288,
+                                        "uuid": "D027-51C9"
+                                    }
+                                ],
+                                "ansible_nodename": "R15-olp-sbcems1-01",
+                                "ansible_os_family": "RedHat",
+                                "ansible_pkg_mgr": "dnf",
+                                "ansible_proc_cmdline": {
+                                    "BOOT_IMAGE": "(hd0,gpt3)/boot/vmlinuz-4.18.0-553.el8_10.x86_64",
+                                    "net.ifnames": "0",
+                                    "quiet": true,
+                                    "resume": "UUID=c46b34c4-c52e-41ba-b852-b083a8a4a0c4",
+                                    "rhgb": true,
+                                    "ro": true,
+                                    "root": "UUID=a9e7ad52-1127-48d2-8612-b8e480052027",
+                                    "selinux": "0"
+                                },
+                                "ansible_processor": [
+                                    "0",
+                                    "GenuineIntel",
+                                    "Intel(R) Xeon(R) Gold 6152 CPU @ 2.10GHz",
+                                    "1",
+                                    "GenuineIntel",
+                                    "Intel(R) Xeon(R) Gold 6152 CPU @ 2.10GHz",
+                                    "2",
+                                    "GenuineIntel",
+                                    "Intel(R) Xeon(R) Gold 6152 CPU @ 2.10GHz",
+                                    "3",
+                                    "GenuineIntel",
+                                    "Intel(R) Xeon(R) Gold 6152 CPU @ 2.10GHz",
+                                    "4",
+                                    "GenuineIntel",
+                                    "Intel(R) Xeon(R) Gold 6152 CPU @ 2.10GHz",
+                                    "5",
+                                    "GenuineIntel",
+                                    "Intel(R) Xeon(R) Gold 6152 CPU @ 2.10GHz"
+                                ],
+                                "ansible_processor_cores": 1,
+                                "ansible_processor_count": 6,
+                                "ansible_processor_nproc": 6,
+                                "ansible_processor_threads_per_core": 1,
+                                "ansible_processor_vcpus": 6,
+                                "ansible_product_name": "VMware7,1",
+                                "ansible_product_serial": "VMware-42 1b cd 61 50 4a 6e c5-6f 96 8b b3 40 29 e8 62",
+                                "ansible_product_uuid": "61cd1b42-4a50-c56e-6f96-8bb34029e862",
+                                "ansible_product_version": "None",
+                                "ansible_python": {
+                                    "executable": "/usr/libexec/platform-python",
+                                    "has_sslcontext": true,
+                                    "type": "cpython",
+                                    "version": {
+                                        "major": 3,
+                                        "micro": 8,
+                                        "minor": 6,
+                                        "releaselevel": "final",
+                                        "serial": 0
+                                    },
+                                    "version_info": [
+                                        3,
+                                        6,
+                                        8,
+                                        "final",
+                                        0
+                                    ]
+                                },
+                                "ansible_python_version": "3.6.8",
+                                "ansible_real_group_id": 0,
+                                "ansible_real_user_id": 0,
+                                "ansible_selinux": {
+                                    "status": "disabled"
+                                },
+                                "ansible_selinux_python_present": true,
+                                "ansible_service_mgr": "systemd",
+                                "ansible_ssh_host_key_ecdsa_public": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBCXs/f9nUbjlg+KjbXEij6R/2ApUETCE1W6ljWVYdCwYpy6i+PmYRK2RtUc/mc6o/wMDXCp/rrWY8m0bc/UVB+M=",
+                                "ansible_ssh_host_key_ecdsa_public_keytype": "ecdsa-sha2-nistp256",
+                                "ansible_ssh_host_key_ed25519_public": "AAAAC3NzaC1lZDI1NTE5AAAAIM88tpdzbYe3o5zD0O4Vx2T+Gcw+Kmq7pmu8lzrbn7Cc",
+                                "ansible_ssh_host_key_ed25519_public_keytype": "ssh-ed25519",
+                                "ansible_ssh_host_key_rsa_public": "AAAAB3NzaC1yc2EAAAADAQABAAABgQDbgOFJMaaj13XUJHah9XF48u2yrigxg/ALNQdJNYVln1NbRMFA/mN4afYj8jeQVL6ZyS8bo8VhxpjG9dxhWurF3qvsy+RQI57nQiJ65AqWtl2QXZT0a/phxgqFJJzB/HW/dvT0R9sfu46BJfM/ZfQYabryjqk/qtvpwRqEMQWUoMzizataDuicItaGrkss6jVqPQXkZ762n+Ajmd1Kp5HNG3FI8e1IfyEM04xS8hxAPBiAQmAQu0YpZgN6KdxTEumwsxwVBs5R3hKGBz5e0BsJC3gRszP8aFd7DmRht2+i+tolTVLv62flk1jNCeSWvv0kWI76iQ5QSJk9JnsluR+6OJ/VEyhH/xyefMksHODaATvcasH3QBKCbwLKm4I+Yup7hnBmoVKTP7hNzF7tH8lQRaOKWw4jfjd0L8FV7sKRROHd6La+3ScH1pt02Qm7IVHPM7Q0d6PgqFfqLPqc359JcH1w6fVl+Xl6yR95jUEKluhGjlGgAyWe1Gea6IUjVLs=",
+                                "ansible_ssh_host_key_rsa_public_keytype": "ssh-rsa",
+                                "ansible_swapfree_mb": 1740,
+                                "ansible_swaptotal_mb": 2047,
+                                "ansible_system": "Linux",
+                                "ansible_system_capabilities": [],
+                                "ansible_system_capabilities_enforced": "False",
+                                "ansible_system_vendor": "VMware, Inc.",
+                                "ansible_uptime_seconds": 5177302,
+                                "ansible_user_dir": "/root",
+                                "ansible_user_gecos": "root",
+                                "ansible_user_gid": 0,
+                                "ansible_user_id": "root",
+                                "ansible_user_shell": "/bin/bash",
+                                "ansible_user_uid": 0,
+                                "ansible_userspace_architecture": "x86_64",
+                                "ansible_userspace_bits": "64",
+                                "ansible_virtualization_role": "guest",
+                                "ansible_virtualization_tech_guest": [
+                                    "VMware"
+                                ],
+                                "ansible_virtualization_tech_host": [],
+                                "ansible_virtualization_type": "VMware",
+                                "discovered_interpreter_python": "/usr/libexec/platform-python",
+                                "gather_subset": [
+                                    "all"
+                                ],
+                                "module_setup": true
+                            },
+                            "changed": false,
+                            "deprecations": [],
+                            "warnings": []
+                        }
+                    },
+                    "task": {
+                        "duration": {
+                            "end": "2025-09-09T05:42:43.962805Z",
+                            "start": "2025-09-09T05:42:21.873277Z"
+                        },
+                        "id": "0050569b-499e-a067-bc04-00000000049c",
+                        "name": "Gathering Facts",
+                        "path": "/home/si/ansible/hardening/audit/site.yml:3"
+                    }
+                },
+                {
+                    "hosts": {
+                        "172.17.225.14": {
+                            "_ansible_no_log": false,
+                            "_ansible_verbose_always": true,
+                            "action": "ansible.builtin.assert",
+                            "changed": false,
+                            "msg": "This role is running against a supported OS RedHat 8"
+                        }
+                    },
+                    "task": {
+                        "duration": {
+                            "end": "2025-09-09T05:42:44.014721Z",
+                            "start": "2025-09-09T05:42:43.980340Z"
+                        },
+                        "id": "0050569b-499e-a067-bc04-000000000027",
+                        "name": "roles : Check OS version and family",
+                        "path": "/home/si/ansible/hardening/audit/roles/tasks/main.yml:4"
+                    }
+                },
+                {
+                    "hosts": {
+                        "172.17.225.14": {
+                            "_ansible_no_log": false,
+                            "_ansible_verbose_always": true,
+                            "action": "ansible.builtin.assert",
+                            "changed": false,
+                            "msg": "This role is running a supported version of ansible 2.16.3 >= 2.11.1"
+                        }
+                    },
+                    "task": {
+                        "duration": {
+                            "end": "2025-09-09T05:42:44.050720Z",
+                            "start": "2025-09-09T05:42:44.022535Z"
+                        },
+                        "id": "0050569b-499e-a067-bc04-000000000028",
+                        "name": "roles : Check ansible version",
+                        "path": "/home/si/ansible/hardening/audit/roles/tasks/main.yml:12"
+                    }
+                },
+                {
+                    "hosts": {
+                        "172.17.225.14": {
+                            "_ansible_no_log": false,
+                            "action": "ansible.builtin.assert",
+                            "changed": false,
+                            "false_condition": "rhel8cis_set_boot_pass",
+                            "skip_reason": "Conditional result was False",
+                            "skipped": true
+                        }
+                    },
+                    "task": {
+                        "duration": {
+                            "end": "2025-09-09T05:42:44.071008Z",
+                            "start": "2025-09-09T05:42:44.056741Z"
+                        },
+                        "id": "0050569b-499e-a067-bc04-00000000002b",
+                        "name": "roles : Check rhel8cis_bootloader_password_hash variable has been changed",
+                        "path": "/home/si/ansible/hardening/audit/roles/tasks/main.yml:33"
+                    }
+                },
+                {
+                    "hosts": {
+                        "172.17.225.14": {
+                            "_ansible_no_log": false,
+                            "action": "ansible.builtin.shell",
+                            "changed": false,
+                            "cmd": "passwd -S root | grep -E \"(Password set, SHA512 crypt|Password locked|root\\s(LK|L)\\s)\"",
+                            "delta": null,
+                            "end": null,
+                            "invocation": {
+                                "module_args": {
+                                    "_raw_params": "passwd -S root | grep -E \"(Password set, SHA512 crypt|Password locked|root\\s(LK|L)\\s)\"",
+                                    "_uses_shell": true,
+                                    "argv": null,
+                                    "chdir": null,
+                                    "creates": null,
+                                    "executable": null,
+                                    "expand_argument_vars": true,
+                                    "removes": null,
+                                    "stdin": null,
+                                    "stdin_add_newline": true,
+                                    "strip_empty_ends": true
+                                }
+                            },
+                            "msg": "Command would have run if not in check mode",
+                            "rc": 0,
+                            "skipped": true,
+                            "start": null,
+                            "stderr": "",
+                            "stderr_lines": [],
+                            "stdout": "",
+                            "stdout_lines": []
+                        }
+                    },
+                    "task": {
+                        "duration": {
+                            "end": "2025-09-09T05:42:45.042522Z",
+                            "start": "2025-09-09T05:42:44.077694Z"
+                        },
+                        "id": "0050569b-499e-a067-bc04-00000000002d",
+                        "name": "roles : Ensure root password is set",
+                        "path": "/home/si/ansible/hardening/audit/roles/tasks/main.yml:46"
+                    }
+                },
+                {
+                    "hosts": {
+                        "172.17.225.14": {
+                            "_ansible_no_log": false,
+                            "_ansible_verbose_always": true,
+                            "action": "ansible.builtin.assert",
+                            "changed": false,
+                            "msg": "You have a root password set"
+                        }
+                    },
+                    "task": {
+                        "duration": {
+                            "end": "2025-09-09T05:42:45.081636Z",
+                            "start": "2025-09-09T05:42:45.050360Z"
+                        },
+                        "id": "0050569b-499e-a067-bc04-00000000002e",
+                        "name": "roles : Ensure root password is set",
+                        "path": "/home/si/ansible/hardening/audit/roles/tasks/main.yml:52"
+                    }
+                },
+                {
+                    "hosts": {
+                        "172.17.225.14": {
+                            "_ansible_no_log": false,
+                            "action": "ansible.builtin.set_fact",
+                            "changed": false,
+                            "false_condition": "ansible_connection == 'docker' or ansible_facts.virtualization_type in [\"docker\", \"lxc\", \"openvz\", \"podman\", \"container\"]",
+                            "skip_reason": "Conditional result was False",
+                            "skipped": true
+                        }
+                    },
+                    "task": {
+                        "duration": {
+                            "end": "2025-09-09T05:42:45.109209Z",
+                            "start": "2025-09-09T05:42:45.089107Z"
+                        },
+                        "id": "0050569b-499e-a067-bc04-000000000030",
+                        "name": "roles : Discover and set container variable if required",
+                        "path": "/home/si/ansible/hardening/audit/roles/tasks/main.yml:64"
+                    }
+                },
+                {
+                    "hosts": {
+                        "172.17.225.14": {
+                            "_ansible_no_log": false,
+                            "action": "ansible.builtin.include_vars",
+                            "changed": false,
+                            "false_condition": "ansible_connection == 'docker' or ansible_facts.virtualization_type in [\"docker\", \"lxc\", \"openvz\", \"podman\", \"container\"]",
+                            "skip_reason": "Conditional result was False",
+                            "skipped": true
+                        }
+                    },
+                    "task": {
+                        "duration": {
+                            "end": "2025-09-09T05:42:45.136889Z",
+                            "start": "2025-09-09T05:42:45.117936Z"
+                        },
+                        "id": "0050569b-499e-a067-bc04-000000000031",
+                        "name": "roles : Load variable for container",
+                        "path": "/home/si/ansible/hardening/audit/roles/tasks/main.yml:68"
+                    }
+                },
+                {
+                    "hosts": {
+                        "172.17.225.14": {
+                            "_ansible_no_log": false,
+                            "action": "ansible.builtin.debug",
+                            "changed": false,
+                            "false_condition": "ansible_connection == 'docker' or ansible_facts.virtualization_type in [\"docker\", \"lxc\", \"openvz\", \"podman\", \"container\"]",
+                            "skip_reason": "Conditional result was False",
+                            "skipped": true
+                        }
+                    },
+                    "task": {
+                        "duration": {
+                            "end": "2025-09-09T05:42:45.165281Z",
+                            "start": "2025-09-09T05:42:45.144437Z"
+                        },
+                        "id": "0050569b-499e-a067-bc04-000000000032",
+                        "name": "roles : Output if discovered is a container",
+                        "path": "/home/si/ansible/hardening/audit/roles/tasks/main.yml:72"
+                    }
+                },
+                {
+                    "hosts": {
+                        "172.17.225.14": {
+                            "_ansible_no_log": false,
+                            "_ansible_verbose_always": true,
+                            "action": "ansible.builtin.assert",
+                            "changed": false,
+                            "msg": "All assertions passed"
+                        }
+                    },
+                    "task": {
+                        "duration": {
+                            "end": "2025-09-09T05:42:45.201000Z",
+                            "start": "2025-09-09T05:42:45.172025Z"
+                        },
+                        "id": "0050569b-499e-a067-bc04-000000000037",
+                        "name": "roles : PRELIM | AUDIT | Check authselect profile name has been updated",
+                        "path": "/home/si/ansible/hardening/audit/roles/tasks/main.yml:103"
+                    }
+                },
+                {
+                    "hosts": {
+                        "172.17.225.14": {
+                            "_ansible_no_log": false,
+                            "action": "ansible.builtin.shell",
+                            "changed": false,
+                            "cmd": "authselect current | head -1 | awk '{print $NF}'",
+                            "delta": null,
+                            "end": null,
+                            "invocation": {
+                                "module_args": {
+                                    "_raw_params": "authselect current | head -1 | awk '{print $NF}'",
+                                    "_uses_shell": true,
+                                    "argv": null,
+                                    "chdir": null,
+                                    "creates": null,
+                                    "executable": null,
+                                    "expand_argument_vars": true,
+                                    "removes": null,
+                                    "stdin": null,
+                                    "stdin_add_newline": true,
+                                    "strip_empty_ends": true
+                                }
+                            },
+                            "msg": "Command would have run if not in check mode",
+                            "rc": 0,
+                            "skipped": true,
+                            "start": null,
+                            "stderr": "",
+                            "stderr_lines": [],
+                            "stdout": "",
+                            "stdout_lines": []
+                        }
+                    },
+                    "task": {
+                        "duration": {
+                            "end": "2025-09-09T05:42:46.051201Z",
+                            "start": "2025-09-09T05:42:45.208892Z"
+                        },
+                        "id": "0050569b-499e-a067-bc04-000000000038",
+                        "name": "roles : PRELIM | AUDIT | Check authselect profile is selected",
+                        "path": "/home/si/ansible/hardening/audit/roles/tasks/main.yml:108"
+                    }
+                },
+                {
+                    "hosts": {
+                        "172.17.225.14": {
+                            "_ansible_no_log": false,
+                            "_ansible_verbose_always": true,
+                            "action": "ansible.builtin.assert",
+                            "changed": false,
+                            "msg": "Authselect is running and profile is selected"
+                        }
+                    },
+                    "task": {
+                        "duration": {
+                            "end": "2025-09-09T05:42:46.086560Z",
+                            "start": "2025-09-09T05:42:46.058034Z"
+                        },
+                        "id": "0050569b-499e-a067-bc04-000000000039",
+                        "name": "roles : PRELIM | AUDIT | Check authselect profile is selected",
+                        "path": "/home/si/ansible/hardening/audit/roles/tasks/main.yml:114"
+                    }
+                },
+                {
+                    "hosts": {
+                        "172.17.225.14": {
+                            "_ansible_no_log": false,
+                            "action": "ansible.builtin.package",
+                            "changed": false,
+                            "invocation": {
+                                "module_args": {
+                                    "allow_downgrade": false,
+                                    "allowerasing": false,
+                                    "autoremove": false,
+                                    "bugfix": false,
+                                    "cacheonly": false,
+                                    "conf_file": null,
+                                    "disable_excludes": null,
+                                    "disable_gpg_check": false,
+                                    "disable_plugin": [],
+                                    "disablerepo": [],
+                                    "download_dir": null,
+                                    "download_only": false,
+                                    "enable_plugin": [],
+                                    "enablerepo": [],
+                                    "exclude": [],
+                                    "install_repoquery": true,
+                                    "install_weak_deps": true,
+                                    "installroot": "/",
+                                    "list": null,
+                                    "lock_timeout": 30,
+                                    "name": [
+                                        "python3-libselinux",
+                                        "python3-rpm"
+                                    ],
+                                    "nobest": false,
+                                    "releasever": null,
+                                    "security": false,
+                                    "skip_broken": false,
+                                    "sslverify": true,
+                                    "state": "present",
+                                    "update_cache": false,
+                                    "update_only": false,
+                                    "use_backend": "auto",
+                                    "validate_certs": true
+                                }
+                            },
+                            "msg": "Nothing to do",
+                            "rc": 0,
+                            "results": []
+                        }
+                    },
+                    "task": {
+                        "duration": {
+                            "end": "2025-09-09T05:44:39.203697Z",
+                            "start": "2025-09-09T05:42:46.093612Z"
+                        },
+                        "id": "0050569b-499e-a067-bc04-00000000003e",
+                        "name": "roles : PRELIM | PATCH | Add the required packages",
+                        "path": "/home/si/ansible/hardening/audit/roles/tasks/prelim.yml:4"
+                    }
+                },
+                {
+                    "hosts": {
+                        "172.17.225.14": {
+                            "_ansible_no_log": false,
+                            "action": "ansible.builtin.shell",
+                            "changed": false,
+                            "cmd": "grep -E -v '^(root|halt|sync|shutdown)' /etc/passwd | awk -F: '(!index($7, \"sbin/nologin\") && $7 != \"/bin/nologin\" && $7 != \"/bin/false\" && $7 != \"/dev/null\") { print $1 }'\n",
+                            "delta": "0:00:00.006392",
+                            "end": "2025-09-09 13:44:39.930094",
+                            "invocation": {
+                                "module_args": {
+                                    "_raw_params": "grep -E -v '^(root|halt|sync|shutdown)' /etc/passwd | awk -F: '(!index($7, \"sbin/nologin\") && $7 != \"/bin/nologin\" && $7 != \"/bin/false\" && $7 != \"/dev/null\") { print $1 }'\n",
+                                    "_uses_shell": true,
+                                    "argv": null,
+                                    "chdir": null,
+                                    "creates": null,
+                                    "executable": null,
+                                    "expand_argument_vars": true,
+                                    "removes": null,
+                                    "stdin": null,
+                                    "stdin_add_newline": true,
+                                    "strip_empty_ends": true
+                                }
+                            },
+                            "msg": "",
+                            "rc": 0,
+                            "start": "2025-09-09 13:44:39.923702",
+                            "stderr": "",
+                            "stderr_lines": [],
+                            "stdout": "nts\nsi\nantony.paul\nhongbin.yang\nkianbeng.lim\nandy.ong\nVictor\nClement\nJohnson\nHaniff\nRuel\nKQ\nAlfred.She\nHanis.ZAID\nAlif.DAHALAN\nAmira.ISMAIL\nKoges.BALASUBRAMANIAM\nFatin.GHAZALI\nFarah.RAZALI\nAqilah.HASAN\nAhmad.HAIZAIR\nGanesan.ARUCHUNAN",
+                            "stdout_lines": [
+                                "nts",
+                                "si",
+                                "antony.paul",
+                                "hongbin.yang",
+                                "kianbeng.lim",
+                                "andy.ong",
+                                "Victor",
+                                "Clement",
+                                "Johnson",
+                                "Haniff",
+                                "Ruel",
+                                "KQ",
+                                "Alfred.She",
+                                "Hanis.ZAID",
+                                "Alif.DAHALAN",
+                                "Amira.ISMAIL",
+                                "Koges.BALASUBRAMANIAM",
+                                "Fatin.GHAZALI",
+                                "Farah.RAZALI",
+                                "Aqilah.HASAN",
+                                "Ahmad.HAIZAIR",
+                                "Ganesan.ARUCHUNAN"
+                            ]
+                        }
+                    },
+                    "task": {
+                        "duration": {
+                            "end": "2025-09-09T05:44:40.052223Z",
+                            "start": "2025-09-09T05:44:39.210627Z"
+                        },
+                        "id": "0050569b-499e-a067-bc04-00000000003f",
+                        "name": "roles : PRELIM | AUDIT | Interactive Users",
+                        "path": "/home/si/ansible/hardening/audit/roles/tasks/prelim.yml:12"
+                    }
+                },
+                {
+                    "hosts": {
+                        "172.17.225.14": {
+                            "_ansible_no_log": false,
+                            "action": "ansible.builtin.shell",
+                            "changed": false,
+                            "cmd": "grep -E -v '^(root|halt|sync|shutdown)' /etc/passwd | awk -F: '(!index($7, \"sbin/nologin\") && $7 != \"/bin/nologin\" && $7 != \"/bin/false\" && $7 != \"/dev/null\") { print $6 }'\n",
+                            "delta": "0:00:00.006317",
+                            "end": "2025-09-09 13:44:40.790386",
+                            "invocation": {
+                                "module_args": {
+                                    "_raw_params": "grep -E -v '^(root|halt|sync|shutdown)' /etc/passwd | awk -F: '(!index($7, \"sbin/nologin\") && $7 != \"/bin/nologin\" && $7 != \"/bin/false\" && $7 != \"/dev/null\") { print $6 }'\n",
+                                    "_uses_shell": true,
+                                    "argv": null,
+                                    "chdir": null,
+                                    "creates": null,
+                                    "executable": null,
+                                    "expand_argument_vars": true,
+                                    "removes": null,
+                                    "stdin": null,
+                                    "stdin_add_newline": true,
+                                    "strip_empty_ends": true
+                                }
+                            },
+                            "msg": "",
+                            "rc": 0,
+                            "start": "2025-09-09 13:44:40.784069",
+                            "stderr": "",
+                            "stderr_lines": [],
+                            "stdout": "/home/nts\n/home/si\n/home/antony.paul\n/home/hongbin.yang\n/home/kianbeng.lim\n/home/andy.ong\n/home/Victor\n/home/Clement\n/home/Johnson\n/home/Haniff\n/home/Ruel\n/home/KQ\n/home/Alfred.She\n/home/Hanis.ZAID\n/home/Alif.DAHALAN\n/home/Amira.ISMAIL\n/home/Koges.BALASUBRAMANIAM\n/home/Fatin.GHAZALI\n/home/Farah.RAZALI\n/home/Aqilah.HASAN\n/home/Ahmad.HAIZAIR\n/home/Ganesan.ARUCHUNAN",
+                            "stdout_lines": [
+                                "/home/nts",
+                                "/home/si",
+                                "/home/antony.paul",
+                                "/home/hongbin.yang",
+                                "/home/kianbeng.lim",
+                                "/home/andy.ong",
+                                "/home/Victor",
+                                "/home/Clement",
+                                "/home/Johnson",
+                                "/home/Haniff",
+                                "/home/Ruel",
+                                "/home/KQ",
+                                "/home/Alfred.She",
+                                "/home/Hanis.ZAID",
+                                "/home/Alif.DAHALAN",
+                                "/home/Amira.ISMAIL",
+                                "/home/Koges.BALASUBRAMANIAM",
+                                "/home/Fatin.GHAZALI",
+                                "/home/Farah.RAZALI",
+                                "/home/Aqilah.HASAN",
+                                "/home/Ahmad.HAIZAIR",
+                                "/home/Ganesan.ARUCHUNAN"
+                            ]
+                        }
+                    },
+                    "task": {
+                        "duration": {
+                            "end": "2025-09-09T05:44:40.910504Z",
+                            "start": "2025-09-09T05:44:40.059286Z"
+                        },
+                        "id": "0050569b-499e-a067-bc04-000000000040",
+                        "name": "roles : PRELIM | AUDIT | Interactive User accounts home directories",
+                        "path": "/home/si/ansible/hardening/audit/roles/tasks/prelim.yml:20"
+                    }
+                },
+                {
+                    "hosts": {
+                        "172.17.225.14": {
+                            "_ansible_no_log": false,
+                            "action": "ansible.builtin.shell",
+                            "changed": false,
+                            "cmd": "grep -E -v '^(root|halt|sync|shutdown)' /etc/passwd | awk -F: '(!index($7, \"sbin/nologin\") && $7 != \"/bin/nologin\" && $7 != \"/bin/false\") { print $3 }'\n",
+                            "delta": "0:00:00.006571",
+                            "end": "2025-09-09 13:44:41.648081",
+                            "invocation": {
+                                "module_args": {
+                                    "_raw_params": "grep -E -v '^(root|halt|sync|shutdown)' /etc/passwd | awk -F: '(!index($7, \"sbin/nologin\") && $7 != \"/bin/nologin\" && $7 != \"/bin/false\") { print $3 }'\n",
+                                    "_uses_shell": true,
+                                    "argv": null,
+                                    "chdir": null,
+                                    "creates": null,
+                                    "executable": null,
+                                    "expand_argument_vars": true,
+                                    "removes": null,
+                                    "stdin": null,
+                                    "stdin_add_newline": true,
+                                    "strip_empty_ends": true
+                                }
+                            },
+                            "msg": "",
+                            "rc": 0,
+                            "start": "2025-09-09 13:44:41.641510",
+                            "stderr": "",
+                            "stderr_lines": [],
+                            "stdout": "1000\n1001\n1002\n1003\n1004\n1005\n1006\n1007\n1008\n1009\n1010\n1011\n1012\n1013\n1014\n1015\n1016\n1017\n1018\n1019\n1020\n1021",
+                            "stdout_lines": [
+                                "1000",
+                                "1001",
+                                "1002",
+                                "1003",
+                                "1004",
+                                "1005",
+                                "1006",
+                                "1007",
+                                "1008",
+                                "1009",
+                                "1010",
+                                "1011",
+                                "1012",
+                                "1013",
+                                "1014",
+                                "1015",
+                                "1016",
+                                "1017",
+                                "1018",
+                                "1019",
+                                "1020",
+                                "1021"
+                            ]
+                        }
+                    },
+                    "task": {
+                        "duration": {
+                            "end": "2025-09-09T05:44:41.775314Z",
+                            "start": "2025-09-09T05:44:40.917459Z"
+                        },
+                        "id": "0050569b-499e-a067-bc04-000000000041",
+                        "name": "roles : PRELIM | AUDIT | Interactive UIDs",
+                        "path": "/home/si/ansible/hardening/audit/roles/tasks/prelim.yml:28"
+                    }
+                },
+                {
+                    "hosts": {
+                        "172.17.225.14": {
+                            "_ansible_no_log": false,
+                            "action": "ansible.builtin.shell",
+                            "changed": false,
+                            "cmd": "grep -w \"^UID_MIN\" /etc/login.defs | awk '{print $NF}'",
+                            "delta": "0:00:00.006514",
+                            "end": "2025-09-09 13:44:42.515584",
+                            "invocation": {
+                                "module_args": {
+                                    "_raw_params": "grep -w \"^UID_MIN\" /etc/login.defs | awk '{print $NF}'",
+                                    "_uses_shell": true,
+                                    "argv": null,
+                                    "chdir": null,
+                                    "creates": null,
+                                    "executable": null,
+                                    "expand_argument_vars": true,
+                                    "removes": null,
+                                    "stdin": null,
+                                    "stdin_add_newline": true,
+                                    "strip_empty_ends": true
+                                }
+                            },
+                            "msg": "",
+                            "rc": 0,
+                            "start": "2025-09-09 13:44:42.509070",
+                            "stderr": "",
+                            "stderr_lines": [],
+                            "stdout": "1000",
+                            "stdout_lines": [
+                                "1000"
+                            ]
+                        }
+                    },
+                    "task": {
+                        "duration": {
+                            "end": "2025-09-09T05:44:42.646731Z",
+                            "start": "2025-09-09T05:44:41.784623Z"
+                        },
+                        "id": "0050569b-499e-a067-bc04-000000000043",
+                        "name": "roles : PRELIM | Capture UID_MIN information from logins.def",
+                        "path": "/home/si/ansible/hardening/audit/roles/tasks/prelim.yml:39"
+                    }
+                },
+                {
+                    "hosts": {
+                        "172.17.225.14": {
+                            "_ansible_no_log": false,
+                            "action": "ansible.builtin.shell",
+                            "changed": false,
+                            "cmd": "grep -w \"^UID_MAX\" /etc/login.defs | awk '{print $NF}'",
+                            "delta": "0:00:00.006320",
+                            "end": "2025-09-09 13:44:43.372950",
+                            "invocation": {
+                                "module_args": {
+                                    "_raw_params": "grep -w \"^UID_MAX\" /etc/login.defs | awk '{print $NF}'",
+                                    "_uses_shell": true,
+                                    "argv": null,
+                                    "chdir": null,
+                                    "creates": null,
+                                    "executable": null,
+                                    "expand_argument_vars": true,
+                                    "removes": null,
+                                    "stdin": null,
+                                    "stdin_add_newline": true,
+                                    "strip_empty_ends": true
+                                }
+                            },
+                            "msg": "",
+                            "rc": 0,
+                            "start": "2025-09-09 13:44:43.366630",
+                            "stderr": "",
+                            "stderr_lines": [],
+                            "stdout": "60000",
+                            "stdout_lines": [
+                                "60000"
+                            ]
+                        }
+                    },
+                    "task": {
+                        "duration": {
+                            "end": "2025-09-09T05:44:43.496806Z",
+                            "start": "2025-09-09T05:44:42.653773Z"
+                        },
+                        "id": "0050569b-499e-a067-bc04-000000000044",
+                        "name": "roles : PRELIM | Capture UID_MAX information from logins.def",
+                        "path": "/home/si/ansible/hardening/audit/roles/tasks/prelim.yml:45"
+                    }
+                },
+                {
+                    "hosts": {
+                        "172.17.225.14": {
+                            "_ansible_no_log": false,
+                            "action": "ansible.builtin.set_fact",
+                            "ansible_facts": {
+                                "max_int_uid": "60000",
+                                "min_int_uid": "1000"
+                            },
+                            "changed": false
+                        }
+                    },
+                    "task": {
+                        "duration": {
+                            "end": "2025-09-09T05:44:43.528268Z",
+                            "start": "2025-09-09T05:44:43.504454Z"
+                        },
+                        "id": "0050569b-499e-a067-bc04-000000000045",
+                        "name": "roles : PRELIM | set_facts for interactive uid/gid",
+                        "path": "/home/si/ansible/hardening/audit/roles/tasks/prelim.yml:51"
+                    }
+                },
+                {
+                    "hosts": {
+                        "172.17.225.14": {
+                            "_ansible_no_log": false,
+                            "action": "ansible.builtin.stat",
+                            "changed": false,
+                            "invocation": {
+                                "module_args": {
+                                    "checksum_algorithm": "sha1",
+                                    "follow": false,
+                                    "get_attributes": true,
+                                    "get_checksum": true,
+                                    "get_mime": true,
+                                    "path": "/sys/firmware/efi"
+                                }
+                            },
+                            "stat": {
+                                "atime": 1752219203.529,
+                                "attr_flags": "",
+                                "attributes": [],
+                                "block_size": 4096,
+                                "blocks": 0,
+                                "charset": "binary",
+                                "ctime": 1752219203.529,
+                                "dev": 20,
+                                "device_type": 0,
+                                "executable": true,
+                                "exists": true,
+                                "gid": 0,
+                                "gr_name": "root",
+                                "inode": 12493,
+                                "isblk": false,
+                                "ischr": false,
+                                "isdir": true,
+                                "isfifo": false,
+                                "isgid": false,
+                                "islnk": false,
+                                "isreg": false,
+                                "issock": false,
+                                "isuid": false,
+                                "mimetype": "inode/directory",
+                                "mode": "0755",
+                                "mtime": 1752219203.529,
+                                "nlink": 6,
+                                "path": "/sys/firmware/efi",
+                                "pw_name": "root",
+                                "readable": true,
+                                "rgrp": true,
+                                "roth": true,
+                                "rusr": true,
+                                "size": 0,
+                                "uid": 0,
+                                "version": null,
+                                "wgrp": false,
+                                "woth": false,
+                                "writeable": true,
+                                "wusr": true,
+                                "xgrp": true,
+                                "xoth": true,
+                                "xusr": true
+                            }
+                        }
+                    },
+                    "task": {
+                        "duration": {
+                            "end": "2025-09-09T05:44:44.571439Z",
+                            "start": "2025-09-09T05:44:43.535153Z"
+                        },
+                        "id": "0050569b-499e-a067-bc04-000000000047",
+                        "name": "roles : PRELIM | AUDIT | Check whether machine is UEFI-based",
+                        "path": "/home/si/ansible/hardening/audit/roles/tasks/prelim.yml:59"
+                    }
+                },
+                {
+                    "hosts": {
+                        "172.17.225.14": {
+                            "_ansible_no_log": false,
+                            "action": "ansible.builtin.set_fact",
+                            "changed": false,
+                            "false_condition": "not prelim_efi_boot.stat.exists",
+                            "skip_reason": "Conditional result was False",
+                            "skipped": true
+                        }
+                    },
+                    "task": {
+                        "duration": {
+                            "end": "2025-09-09T05:44:44.600038Z",
+                            "start": "2025-09-09T05:44:44.578970Z"
+                        },
+                        "id": "0050569b-499e-a067-bc04-000000000048",
+                        "name": "roles : PRELIM | AUDIT | set legacy boot and grub path fact | Bios",
+                        "path": "/home/si/ansible/hardening/audit/roles/tasks/prelim.yml:64"
+                    }
+                },
+                {
+                    "hosts": {
+                        "172.17.225.14": {
+                            "_ansible_no_log": false,
+                            "action": "ansible.builtin.set_fact",
+                            "ansible_facts": {
+                                "grub2_path": "/etc/grub2-efi.cfg",
+                                "rhel8cis_boot_path": "/boot/efi/EFI/redhat/"
+                            },
+                            "changed": false
+                        }
+                    },
+                    "task": {
+                        "duration": {
+                            "end": "2025-09-09T05:44:44.669529Z",
+                            "start": "2025-09-09T05:44:44.607297Z"
+                        },
+                        "id": "0050569b-499e-a067-bc04-000000000049",
+                        "name": "roles : PRELIM | AUDIT | set grub fact | UEFI",
+                        "path": "/home/si/ansible/hardening/audit/roles/tasks/prelim.yml:71"
+                    }
+                },
+                {
+                    "hosts": {
+                        "172.17.225.14": {
+                            "_ansible_no_log": false,
+                            "action": "ansible.builtin.stat",
+                            "changed": false,
+                            "invocation": {
+                                "module_args": {
+                                    "checksum_algorithm": "sha1",
+                                    "follow": false,
+                                    "get_attributes": true,
+                                    "get_checksum": true,
+                                    "get_mime": true,
+                                    "path": "/etc/grub2-efi.cfg"
+                                }
+                            },
+                            "stat": {
+                                "atime": 1757320799.506596,
+                                "attr_flags": "",
+                                "attributes": [],
+                                "block_size": 4096,
+                                "blocks": 0,
+                                "charset": "binary",
+                                "ctime": 1751252464.9690208,
+                                "dev": 2051,
+                                "device_type": 0,
+                                "executable": true,
+                                "exists": true,
+                                "gid": 0,
+                                "gr_name": "root",
+                                "inode": 538614636,
+                                "isblk": false,
+                                "ischr": false,
+                                "isdir": false,
+                                "isfifo": false,
+                                "isgid": false,
+                                "islnk": true,
+                                "isreg": false,
+                                "issock": false,
+                                "isuid": false,
+                                "lnk_source": "/boot/efi/EFI/redhat/grub.cfg",
+                                "lnk_target": "../boot/efi/EFI/redhat/grub.cfg",
+                                "mimetype": "inode/symlink",
+                                "mode": "0777",
+                                "mtime": 1708521138.0,
+                                "nlink": 1,
+                                "path": "/etc/grub2-efi.cfg",
+                                "pw_name": "root",
+                                "readable": true,
+                                "rgrp": true,
+                                "roth": true,
+                                "rusr": true,
+                                "size": 31,
+                                "uid": 0,
+                                "version": null,
+                                "wgrp": true,
+                                "woth": true,
+                                "writeable": true,
+                                "wusr": true,
+                                "xgrp": true,
+                                "xoth": true,
+                                "xusr": true
+                            }
+                        }
+                    },
+                    "task": {
+                        "duration": {
+                            "end": "2025-09-09T05:44:45.530800Z",
+                            "start": "2025-09-09T05:44:44.677648Z"
+                        },
+                        "id": "0050569b-499e-a067-bc04-00000000004b",
+                        "name": "roles : PRELIM | AUDIT | Ensure permissions on bootloader config are configured | Get grub config file stats",
+                        "path": "/home/si/ansible/hardening/audit/roles/tasks/prelim.yml:77"
+                    }
+                },
+                {
+                    "hosts": {
+                        "172.17.225.14": {
+                            "_ansible_no_log": false,
+                            "action": "ansible.builtin.package_facts",
+                            "ansible_facts": {
+                                "packages": {
+                                    "GConf2": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "GConf2",
+                                            "release": "22.el8",
+                                            "source": "rpm",
+                                            "version": "3.2.6"
+                                        }
+                                    ],
+                                    "HdrHistogram_c": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "HdrHistogram_c",
+                                            "release": "2.el8",
+                                            "source": "rpm",
+                                            "version": "0.9.13"
+                                        }
+                                    ],
+                                    "ModemManager": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "ModemManager",
+                                            "release": "1.el8",
+                                            "source": "rpm",
+                                            "version": "1.20.2"
+                                        }
+                                    ],
+                                    "ModemManager-glib": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "ModemManager-glib",
+                                            "release": "1.el8",
+                                            "source": "rpm",
+                                            "version": "1.20.2"
+                                        }
+                                    ],
+                                    "NetworkManager": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": 1,
+                                            "name": "NetworkManager",
+                                            "release": "15.el8",
+                                            "source": "rpm",
+                                            "version": "1.40.16"
+                                        }
+                                    ],
+                                    "NetworkManager-adsl": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": 1,
+                                            "name": "NetworkManager-adsl",
+                                            "release": "15.el8",
+                                            "source": "rpm",
+                                            "version": "1.40.16"
+                                        }
+                                    ],
+                                    "NetworkManager-bluetooth": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": 1,
+                                            "name": "NetworkManager-bluetooth",
+                                            "release": "15.el8",
+                                            "source": "rpm",
+                                            "version": "1.40.16"
+                                        }
+                                    ],
+                                    "NetworkManager-config-server": [
+                                        {
+                                            "arch": "noarch",
+                                            "epoch": 1,
+                                            "name": "NetworkManager-config-server",
+                                            "release": "15.el8",
+                                            "source": "rpm",
+                                            "version": "1.40.16"
+                                        }
+                                    ],
+                                    "NetworkManager-libnm": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": 1,
+                                            "name": "NetworkManager-libnm",
+                                            "release": "15.el8",
+                                            "source": "rpm",
+                                            "version": "1.40.16"
+                                        }
+                                    ],
+                                    "NetworkManager-libreswan": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "NetworkManager-libreswan",
+                                            "release": "5.el8",
+                                            "source": "rpm",
+                                            "version": "1.2.10"
+                                        }
+                                    ],
+                                    "NetworkManager-team": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": 1,
+                                            "name": "NetworkManager-team",
+                                            "release": "15.el8",
+                                            "source": "rpm",
+                                            "version": "1.40.16"
+                                        }
+                                    ],
+                                    "NetworkManager-tui": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": 1,
+                                            "name": "NetworkManager-tui",
+                                            "release": "15.el8",
+                                            "source": "rpm",
+                                            "version": "1.40.16"
+                                        }
+                                    ],
+                                    "NetworkManager-wifi": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": 1,
+                                            "name": "NetworkManager-wifi",
+                                            "release": "15.el8",
+                                            "source": "rpm",
+                                            "version": "1.40.16"
+                                        }
+                                    ],
+                                    "NetworkManager-wwan": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": 1,
+                                            "name": "NetworkManager-wwan",
+                                            "release": "15.el8",
+                                            "source": "rpm",
+                                            "version": "1.40.16"
+                                        }
+                                    ],
+                                    "PackageKit": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "PackageKit",
+                                            "release": "7.el8",
+                                            "source": "rpm",
+                                            "version": "1.1.12"
+                                        }
+                                    ],
+                                    "PackageKit-command-not-found": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "PackageKit-command-not-found",
+                                            "release": "7.el8",
+                                            "source": "rpm",
+                                            "version": "1.1.12"
+                                        }
+                                    ],
+                                    "PackageKit-glib": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "PackageKit-glib",
+                                            "release": "7.el8",
+                                            "source": "rpm",
+                                            "version": "1.1.12"
+                                        }
+                                    ],
+                                    "PackageKit-gstreamer-plugin": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "PackageKit-gstreamer-plugin",
+                                            "release": "7.el8",
+                                            "source": "rpm",
+                                            "version": "1.1.12"
+                                        }
+                                    ],
+                                    "PackageKit-gtk3-module": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "PackageKit-gtk3-module",
+                                            "release": "7.el8",
+                                            "source": "rpm",
+                                            "version": "1.1.12"
+                                        }
+                                    ],
+                                    "SDL": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "SDL",
+                                            "release": "39.el8",
+                                            "source": "rpm",
+                                            "version": "1.2.15"
+                                        }
+                                    ],
+                                    "abattis-cantarell-fonts": [
+                                        {
+                                            "arch": "noarch",
+                                            "epoch": null,
+                                            "name": "abattis-cantarell-fonts",
+                                            "release": "6.el8",
+                                            "source": "rpm",
+                                            "version": "0.0.25"
+                                        }
+                                    ],
+                                    "accountsservice": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "accountsservice",
+                                            "release": "4.el8",
+                                            "source": "rpm",
+                                            "version": "0.6.55"
+                                        }
+                                    ],
+                                    "accountsservice-libs": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "accountsservice-libs",
+                                            "release": "4.el8",
+                                            "source": "rpm",
+                                            "version": "0.6.55"
+                                        }
+                                    ],
+                                    "acl": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "acl",
+                                            "release": "3.el8",
+                                            "source": "rpm",
+                                            "version": "2.2.53"
+                                        }
+                                    ],
+                                    "adcli": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "adcli",
+                                            "release": "1.el8",
+                                            "source": "rpm",
+                                            "version": "0.9.2"
+                                        }
+                                    ],
+                                    "adobe-mappings-cmap": [
+                                        {
+                                            "arch": "noarch",
+                                            "epoch": null,
+                                            "name": "adobe-mappings-cmap",
+                                            "release": "3.el8",
+                                            "source": "rpm",
+                                            "version": "20171205"
+                                        }
+                                    ],
+                                    "adobe-mappings-cmap-deprecated": [
+                                        {
+                                            "arch": "noarch",
+                                            "epoch": null,
+                                            "name": "adobe-mappings-cmap-deprecated",
+                                            "release": "3.el8",
+                                            "source": "rpm",
+                                            "version": "20171205"
+                                        }
+                                    ],
+                                    "adobe-mappings-pdf": [
+                                        {
+                                            "arch": "noarch",
+                                            "epoch": null,
+                                            "name": "adobe-mappings-pdf",
+                                            "release": "1.el8",
+                                            "source": "rpm",
+                                            "version": "20180407"
+                                        }
+                                    ],
+                                    "adwaita-cursor-theme": [
+                                        {
+                                            "arch": "noarch",
+                                            "epoch": null,
+                                            "name": "adwaita-cursor-theme",
+                                            "release": "3.el8",
+                                            "source": "rpm",
+                                            "version": "3.28.0"
+                                        }
+                                    ],
+                                    "adwaita-gtk2-theme": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "adwaita-gtk2-theme",
+                                            "release": "4.el8",
+                                            "source": "rpm",
+                                            "version": "3.22.3"
+                                        }
+                                    ],
+                                    "adwaita-icon-theme": [
+                                        {
+                                            "arch": "noarch",
+                                            "epoch": null,
+                                            "name": "adwaita-icon-theme",
+                                            "release": "3.el8",
+                                            "source": "rpm",
+                                            "version": "3.28.0"
+                                        }
+                                    ],
+                                    "alsa-lib": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "alsa-lib",
+                                            "release": "2.el8",
+                                            "source": "rpm",
+                                            "version": "1.2.10"
+                                        }
+                                    ],
+                                    "alsa-plugins-pulseaudio": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "alsa-plugins-pulseaudio",
+                                            "release": "1.el8",
+                                            "source": "rpm",
+                                            "version": "1.1.9"
+                                        }
+                                    ],
+                                    "alsa-sof-firmware": [
+                                        {
+                                            "arch": "noarch",
+                                            "epoch": null,
+                                            "name": "alsa-sof-firmware",
+                                            "release": "1.el8",
+                                            "source": "rpm",
+                                            "version": "2023.09.2"
+                                        }
+                                    ],
+                                    "alsa-ucm": [
+                                        {
+                                            "arch": "noarch",
+                                            "epoch": null,
+                                            "name": "alsa-ucm",
+                                            "release": "2.el8",
+                                            "source": "rpm",
+                                            "version": "1.2.10"
+                                        }
+                                    ],
+                                    "alsa-utils": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "alsa-utils",
+                                            "release": "1.el8",
+                                            "source": "rpm",
+                                            "version": "1.2.10"
+                                        }
+                                    ],
+                                    "anaconda-core": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "anaconda-core",
+                                            "release": "1.el8",
+                                            "source": "rpm",
+                                            "version": "33.16.10.5"
+                                        }
+                                    ],
+                                    "anaconda-gui": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "anaconda-gui",
+                                            "release": "1.el8",
+                                            "source": "rpm",
+                                            "version": "33.16.10.5"
+                                        }
+                                    ],
+                                    "anaconda-tui": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "anaconda-tui",
+                                            "release": "1.el8",
+                                            "source": "rpm",
+                                            "version": "33.16.10.5"
+                                        }
+                                    ],
+                                    "anaconda-user-help": [
+                                        {
+                                            "arch": "noarch",
+                                            "epoch": 1,
+                                            "name": "anaconda-user-help",
+                                            "release": "1.el8",
+                                            "source": "rpm",
+                                            "version": "8.8.3"
+                                        }
+                                    ],
+                                    "anaconda-widgets": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "anaconda-widgets",
+                                            "release": "1.el8",
+                                            "source": "rpm",
+                                            "version": "33.16.10.5"
+                                        }
+                                    ],
+                                    "annobin": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "annobin",
+                                            "release": "2.el8",
+                                            "source": "rpm",
+                                            "version": "11.13"
+                                        }
+                                    ],
+                                    "appstream-data": [
+                                        {
+                                            "arch": "noarch",
+                                            "epoch": null,
+                                            "name": "appstream-data",
+                                            "release": "20200724.el8",
+                                            "source": "rpm",
+                                            "version": "8"
+                                        }
+                                    ],
+                                    "asciidoc": [
+                                        {
+                                            "arch": "noarch",
+                                            "epoch": null,
+                                            "name": "asciidoc",
+                                            "release": "0.5.20180627gitf7c2274.el8",
+                                            "source": "rpm",
+                                            "version": "8.6.10"
+                                        }
+                                    ],
+                                    "aspell": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": 12,
+                                            "name": "aspell",
+                                            "release": "22.el8",
+                                            "source": "rpm",
+                                            "version": "0.60.6.1"
+                                        }
+                                    ],
+                                    "at": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "at",
+                                            "release": "12.el8",
+                                            "source": "rpm",
+                                            "version": "3.1.20"
+                                        }
+                                    ],
+                                    "at-spi2-atk": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "at-spi2-atk",
+                                            "release": "1.el8",
+                                            "source": "rpm",
+                                            "version": "2.26.2"
+                                        }
+                                    ],
+                                    "at-spi2-core": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "at-spi2-core",
+                                            "release": "1.el8",
+                                            "source": "rpm",
+                                            "version": "2.28.0"
+                                        }
+                                    ],
+                                    "atk": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "atk",
+                                            "release": "1.el8",
+                                            "source": "rpm",
+                                            "version": "2.28.1"
+                                        }
+                                    ],
+                                    "atkmm": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "atkmm",
+                                            "release": "7.el8",
+                                            "source": "rpm",
+                                            "version": "2.24.2"
+                                        }
+                                    ],
+                                    "attr": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "attr",
+                                            "release": "3.el8",
+                                            "source": "rpm",
+                                            "version": "2.4.48"
+                                        }
+                                    ],
+                                    "audit": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "audit",
+                                            "release": "1.el8",
+                                            "source": "rpm",
+                                            "version": "3.1.2"
+                                        }
+                                    ],
+                                    "audit-libs": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "audit-libs",
+                                            "release": "1.el8",
+                                            "source": "rpm",
+                                            "version": "3.1.2"
+                                        }
+                                    ],
+                                    "augeas-libs": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "augeas-libs",
+                                            "release": "8.el8",
+                                            "source": "rpm",
+                                            "version": "1.12.0"
+                                        }
+                                    ],
+                                    "authselect": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "authselect",
+                                            "release": "2.el8",
+                                            "source": "rpm",
+                                            "version": "1.2.6"
+                                        }
+                                    ],
+                                    "authselect-compat": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "authselect-compat",
+                                            "release": "2.el8",
+                                            "source": "rpm",
+                                            "version": "1.2.6"
+                                        }
+                                    ],
+                                    "authselect-libs": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "authselect-libs",
+                                            "release": "2.el8",
+                                            "source": "rpm",
+                                            "version": "1.2.6"
+                                        }
+                                    ],
+                                    "autoconf": [
+                                        {
+                                            "arch": "noarch",
+                                            "epoch": null,
+                                            "name": "autoconf",
+                                            "release": "29.el8",
+                                            "source": "rpm",
+                                            "version": "2.69"
+                                        }
+                                    ],
+                                    "autofs": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": 1,
+                                            "name": "autofs",
+                                            "release": "113.el8",
+                                            "source": "rpm",
+                                            "version": "5.1.4"
+                                        }
+                                    ],
+                                    "autogen-libopts": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "autogen-libopts",
+                                            "release": "8.el8",
+                                            "source": "rpm",
+                                            "version": "5.18.12"
+                                        }
+                                    ],
+                                    "automake": [
+                                        {
+                                            "arch": "noarch",
+                                            "epoch": null,
+                                            "name": "automake",
+                                            "release": "8.el8",
+                                            "source": "rpm",
+                                            "version": "1.16.1"
+                                        }
+                                    ],
+                                    "avahi": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "avahi",
+                                            "release": "27.el8",
+                                            "source": "rpm",
+                                            "version": "0.7"
+                                        }
+                                    ],
+                                    "avahi-glib": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "avahi-glib",
+                                            "release": "27.el8",
+                                            "source": "rpm",
+                                            "version": "0.7"
+                                        }
+                                    ],
+                                    "avahi-libs": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "avahi-libs",
+                                            "release": "27.el8",
+                                            "source": "rpm",
+                                            "version": "0.7"
+                                        }
+                                    ],
+                                    "baobab": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "baobab",
+                                            "release": "4.el8",
+                                            "source": "rpm",
+                                            "version": "3.28.0"
+                                        }
+                                    ],
+                                    "basesystem": [
+                                        {
+                                            "arch": "noarch",
+                                            "epoch": null,
+                                            "name": "basesystem",
+                                            "release": "5.el8",
+                                            "source": "rpm",
+                                            "version": "11"
+                                        }
+                                    ],
+                                    "bash": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "bash",
+                                            "release": "5.el8",
+                                            "source": "rpm",
+                                            "version": "4.4.20"
+                                        }
+                                    ],
+                                    "bash-completion": [
+                                        {
+                                            "arch": "noarch",
+                                            "epoch": 1,
+                                            "name": "bash-completion",
+                                            "release": "5.el8",
+                                            "source": "rpm",
+                                            "version": "2.7"
+                                        }
+                                    ],
+                                    "bc": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "bc",
+                                            "release": "5.el8",
+                                            "source": "rpm",
+                                            "version": "1.07.1"
+                                        }
+                                    ],
+                                    "bcc": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "bcc",
+                                            "release": "7.el8",
+                                            "source": "rpm",
+                                            "version": "0.25.0"
+                                        }
+                                    ],
+                                    "bcc-tools": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "bcc-tools",
+                                            "release": "7.el8",
+                                            "source": "rpm",
+                                            "version": "0.25.0"
+                                        }
+                                    ],
+                                    "bind-libs": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": 32,
+                                            "name": "bind-libs",
+                                            "release": "13.el8",
+                                            "source": "rpm",
+                                            "version": "9.11.36"
+                                        }
+                                    ],
+                                    "bind-libs-lite": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": 32,
+                                            "name": "bind-libs-lite",
+                                            "release": "13.el8",
+                                            "source": "rpm",
+                                            "version": "9.11.36"
+                                        }
+                                    ],
+                                    "bind-license": [
+                                        {
+                                            "arch": "noarch",
+                                            "epoch": 32,
+                                            "name": "bind-license",
+                                            "release": "13.el8",
+                                            "source": "rpm",
+                                            "version": "9.11.36"
+                                        }
+                                    ],
+                                    "bind-utils": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": 32,
+                                            "name": "bind-utils",
+                                            "release": "13.el8",
+                                            "source": "rpm",
+                                            "version": "9.11.36"
+                                        }
+                                    ],
+                                    "binutils": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "binutils",
+                                            "release": "123.el8",
+                                            "source": "rpm",
+                                            "version": "2.30"
+                                        }
+                                    ],
+                                    "biosdevname": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "biosdevname",
+                                            "release": "2.el8",
+                                            "source": "rpm",
+                                            "version": "0.7.3"
+                                        }
+                                    ],
+                                    "bison": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "bison",
+                                            "release": "10.el8",
+                                            "source": "rpm",
+                                            "version": "3.0.4"
+                                        }
+                                    ],
+                                    "blivet-data": [
+                                        {
+                                            "arch": "noarch",
+                                            "epoch": 1,
+                                            "name": "blivet-data",
+                                            "release": "8.el8",
+                                            "source": "rpm",
+                                            "version": "3.6.0"
+                                        }
+                                    ],
+                                    "blktrace": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "blktrace",
+                                            "release": "10.el8",
+                                            "source": "rpm",
+                                            "version": "1.2.0"
+                                        }
+                                    ],
+                                    "bluez": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "bluez",
+                                            "release": "1.el8",
+                                            "source": "rpm",
+                                            "version": "5.63"
+                                        }
+                                    ],
+                                    "bluez-libs": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "bluez-libs",
+                                            "release": "1.el8",
+                                            "source": "rpm",
+                                            "version": "5.63"
+                                        }
+                                    ],
+                                    "bluez-obexd": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "bluez-obexd",
+                                            "release": "1.el8",
+                                            "source": "rpm",
+                                            "version": "5.63"
+                                        }
+                                    ],
+                                    "bolt": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "bolt",
+                                            "release": "1.el8",
+                                            "source": "rpm",
+                                            "version": "0.9.1"
+                                        }
+                                    ],
+                                    "boost-atomic": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "boost-atomic",
+                                            "release": "13.el8",
+                                            "source": "rpm",
+                                            "version": "1.66.0"
+                                        }
+                                    ],
+                                    "boost-chrono": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "boost-chrono",
+                                            "release": "13.el8",
+                                            "source": "rpm",
+                                            "version": "1.66.0"
+                                        }
+                                    ],
+                                    "boost-date-time": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "boost-date-time",
+                                            "release": "13.el8",
+                                            "source": "rpm",
+                                            "version": "1.66.0"
+                                        }
+                                    ],
+                                    "boost-filesystem": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "boost-filesystem",
+                                            "release": "13.el8",
+                                            "source": "rpm",
+                                            "version": "1.66.0"
+                                        }
+                                    ],
+                                    "boost-iostreams": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "boost-iostreams",
+                                            "release": "13.el8",
+                                            "source": "rpm",
+                                            "version": "1.66.0"
+                                        }
+                                    ],
+                                    "boost-program-options": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "boost-program-options",
+                                            "release": "13.el8",
+                                            "source": "rpm",
+                                            "version": "1.66.0"
+                                        }
+                                    ],
+                                    "boost-random": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "boost-random",
+                                            "release": "13.el8",
+                                            "source": "rpm",
+                                            "version": "1.66.0"
+                                        }
+                                    ],
+                                    "boost-regex": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "boost-regex",
+                                            "release": "13.el8",
+                                            "source": "rpm",
+                                            "version": "1.66.0"
+                                        }
+                                    ],
+                                    "boost-system": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "boost-system",
+                                            "release": "13.el8",
+                                            "source": "rpm",
+                                            "version": "1.66.0"
+                                        }
+                                    ],
+                                    "boost-thread": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "boost-thread",
+                                            "release": "13.el8",
+                                            "source": "rpm",
+                                            "version": "1.66.0"
+                                        }
+                                    ],
+                                    "boost-timer": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "boost-timer",
+                                            "release": "13.el8",
+                                            "source": "rpm",
+                                            "version": "1.66.0"
+                                        }
+                                    ],
+                                    "bpftool": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "bpftool",
+                                            "release": "553.el8_10",
+                                            "source": "rpm",
+                                            "version": "4.18.0"
+                                        }
+                                    ],
+                                    "bpftrace": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "bpftrace",
+                                            "release": "5.el8",
+                                            "source": "rpm",
+                                            "version": "0.16.0"
+                                        }
+                                    ],
+                                    "brlapi": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "brlapi",
+                                            "release": "32.el8",
+                                            "source": "rpm",
+                                            "version": "0.6.7"
+                                        }
+                                    ],
+                                    "brltty": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "brltty",
+                                            "release": "32.el8",
+                                            "source": "rpm",
+                                            "version": "5.6"
+                                        }
+                                    ],
+                                    "brotli": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "brotli",
+                                            "release": "3.el8",
+                                            "source": "rpm",
+                                            "version": "1.0.6"
+                                        }
+                                    ],
+                                    "bubblewrap": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "bubblewrap",
+                                            "release": "1.el8",
+                                            "source": "rpm",
+                                            "version": "0.4.0"
+                                        }
+                                    ],
+                                    "buildah": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": 2,
+                                            "name": "buildah",
+                                            "release": "2.module+el8.10.0+21371+46937ece",
+                                            "source": "rpm",
+                                            "version": "1.33.6"
+                                        }
+                                    ],
+                                    "byacc": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "byacc",
+                                            "release": "4.el8",
+                                            "source": "rpm",
+                                            "version": "1.9.20170709"
+                                        }
+                                    ],
+                                    "bzip2": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "bzip2",
+                                            "release": "26.el8",
+                                            "source": "rpm",
+                                            "version": "1.0.6"
+                                        }
+                                    ],
+                                    "bzip2-libs": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "bzip2-libs",
+                                            "release": "26.el8",
+                                            "source": "rpm",
+                                            "version": "1.0.6"
+                                        }
+                                    ],
+                                    "c-ares": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "c-ares",
+                                            "release": "10.el8",
+                                            "source": "rpm",
+                                            "version": "1.13.0"
+                                        }
+                                    ],
+                                    "ca-certificates": [
+                                        {
+                                            "arch": "noarch",
+                                            "epoch": null,
+                                            "name": "ca-certificates",
+                                            "release": "80.0.el8_8",
+                                            "source": "rpm",
+                                            "version": "2023.2.60_v7.0.306"
+                                        }
+                                    ],
+                                    "cairo": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "cairo",
+                                            "release": "6.el8",
+                                            "source": "rpm",
+                                            "version": "1.15.12"
+                                        }
+                                    ],
+                                    "cairo-gobject": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "cairo-gobject",
+                                            "release": "6.el8",
+                                            "source": "rpm",
+                                            "version": "1.15.12"
+                                        }
+                                    ],
+                                    "cairomm": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "cairomm",
+                                            "release": "8.el8",
+                                            "source": "rpm",
+                                            "version": "1.12.0"
+                                        }
+                                    ],
+                                    "celt051": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "celt051",
+                                            "release": "15.el8",
+                                            "source": "rpm",
+                                            "version": "0.5.1.3"
+                                        }
+                                    ],
+                                    "cgdcbxd": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "cgdcbxd",
+                                            "release": "9.el8",
+                                            "source": "rpm",
+                                            "version": "1.0.2"
+                                        }
+                                    ],
+                                    "chan": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "chan",
+                                            "release": "3.el8",
+                                            "source": "rpm",
+                                            "version": "0.0.4"
+                                        }
+                                    ],
+                                    "checkpolicy": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "checkpolicy",
+                                            "release": "1.el8",
+                                            "source": "rpm",
+                                            "version": "2.9"
+                                        }
+                                    ],
+                                    "cheese": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": 2,
+                                            "name": "cheese",
+                                            "release": "4.el8",
+                                            "source": "rpm",
+                                            "version": "3.28.0"
+                                        }
+                                    ],
+                                    "cheese-libs": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": 2,
+                                            "name": "cheese-libs",
+                                            "release": "4.el8",
+                                            "source": "rpm",
+                                            "version": "3.28.0"
+                                        }
+                                    ],
+                                    "chkconfig": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "chkconfig",
+                                            "release": "1.el8",
+                                            "source": "rpm",
+                                            "version": "1.19.2"
+                                        }
+                                    ],
+                                    "chrome-gnome-shell": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "chrome-gnome-shell",
+                                            "release": "1.el8",
+                                            "source": "rpm",
+                                            "version": "42.1"
+                                        }
+                                    ],
+                                    "chrony": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "chrony",
+                                            "release": "1.el8",
+                                            "source": "rpm",
+                                            "version": "4.5"
+                                        }
+                                    ],
+                                    "cifs-utils": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "cifs-utils",
+                                            "release": "1.el8",
+                                            "source": "rpm",
+                                            "version": "7.0"
+                                        }
+                                    ],
+                                    "clang-libs": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "clang-libs",
+                                            "release": "1.module+el8.10.0+20808+e12784c0",
+                                            "source": "rpm",
+                                            "version": "17.0.6"
+                                        }
+                                    ],
+                                    "clang-resource-filesystem": [
+                                        {
+                                            "arch": "noarch",
+                                            "epoch": null,
+                                            "name": "clang-resource-filesystem",
+                                            "release": "1.module+el8.10.0+20808+e12784c0",
+                                            "source": "rpm",
+                                            "version": "17.0.6"
+                                        }
+                                    ],
+                                    "cldr-emoji-annotation": [
+                                        {
+                                            "arch": "noarch",
+                                            "epoch": null,
+                                            "name": "cldr-emoji-annotation",
+                                            "release": "2.el8",
+                                            "source": "rpm",
+                                            "version": "39"
+                                        }
+                                    ],
+                                    "clevis": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "clevis",
+                                            "release": "15.el8",
+                                            "source": "rpm",
+                                            "version": "15"
+                                        }
+                                    ],
+                                    "clevis-luks": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "clevis-luks",
+                                            "release": "15.el8",
+                                            "source": "rpm",
+                                            "version": "15"
+                                        }
+                                    ],
+                                    "clutter": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "clutter",
+                                            "release": "8.el8",
+                                            "source": "rpm",
+                                            "version": "1.26.2"
+                                        }
+                                    ],
+                                    "clutter-gst3": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "clutter-gst3",
+                                            "release": "1.el8",
+                                            "source": "rpm",
+                                            "version": "3.0.26"
+                                        }
+                                    ],
+                                    "clutter-gtk": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "clutter-gtk",
+                                            "release": "3.el8",
+                                            "source": "rpm",
+                                            "version": "1.8.4"
+                                        }
+                                    ],
+                                    "cockpit": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "cockpit",
+                                            "release": "1.el8",
+                                            "source": "rpm",
+                                            "version": "310.3"
+                                        }
+                                    ],
+                                    "cockpit-bridge": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "cockpit-bridge",
+                                            "release": "1.el8",
+                                            "source": "rpm",
+                                            "version": "310.3"
+                                        }
+                                    ],
+                                    "cockpit-packagekit": [
+                                        {
+                                            "arch": "noarch",
+                                            "epoch": null,
+                                            "name": "cockpit-packagekit",
+                                            "release": "2.el8",
+                                            "source": "rpm",
+                                            "version": "310.3"
+                                        }
+                                    ],
+                                    "cockpit-podman": [
+                                        {
+                                            "arch": "noarch",
+                                            "epoch": null,
+                                            "name": "cockpit-podman",
+                                            "release": "1.module+el8.10.0+21373+0d273fdf",
+                                            "source": "rpm",
+                                            "version": "84.1"
+                                        }
+                                    ],
+                                    "cockpit-storaged": [
+                                        {
+                                            "arch": "noarch",
+                                            "epoch": null,
+                                            "name": "cockpit-storaged",
+                                            "release": "2.el8",
+                                            "source": "rpm",
+                                            "version": "310.3"
+                                        }
+                                    ],
+                                    "cockpit-system": [
+                                        {
+                                            "arch": "noarch",
+                                            "epoch": null,
+                                            "name": "cockpit-system",
+                                            "release": "1.el8",
+                                            "source": "rpm",
+                                            "version": "310.3"
+                                        }
+                                    ],
+                                    "cockpit-ws": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "cockpit-ws",
+                                            "release": "1.el8",
+                                            "source": "rpm",
+                                            "version": "310.3"
+                                        }
+                                    ],
+                                    "cogl": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "cogl",
+                                            "release": "10.el8",
+                                            "source": "rpm",
+                                            "version": "1.22.2"
+                                        }
+                                    ],
+                                    "color-filesystem": [
+                                        {
+                                            "arch": "noarch",
+                                            "epoch": null,
+                                            "name": "color-filesystem",
+                                            "release": "20.el8",
+                                            "source": "rpm",
+                                            "version": "1"
+                                        }
+                                    ],
+                                    "colord": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "colord",
+                                            "release": "1.el8",
+                                            "source": "rpm",
+                                            "version": "1.4.2"
+                                        }
+                                    ],
+                                    "colord-gtk": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "colord-gtk",
+                                            "release": "8.el8",
+                                            "source": "rpm",
+                                            "version": "0.1.26"
+                                        }
+                                    ],
+                                    "colord-libs": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "colord-libs",
+                                            "release": "1.el8",
+                                            "source": "rpm",
+                                            "version": "1.4.2"
+                                        }
+                                    ],
+                                    "compat-openssl10": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": 1,
+                                            "name": "compat-openssl10",
+                                            "release": "3.el8",
+                                            "source": "rpm",
+                                            "version": "1.0.2o"
+                                        }
+                                    ],
+                                    "compiler-rt": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "compiler-rt",
+                                            "release": "1.module+el8.10.0+20808+e12784c0",
+                                            "source": "rpm",
+                                            "version": "17.0.6"
+                                        }
+                                    ],
+                                    "conmon": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": 3,
+                                            "name": "conmon",
+                                            "release": "1.module+el8.10.0+21077+98b84d8a",
+                                            "source": "rpm",
+                                            "version": "2.1.10"
+                                        }
+                                    ],
+                                    "container-selinux": [
+                                        {
+                                            "arch": "noarch",
+                                            "epoch": 2,
+                                            "name": "container-selinux",
+                                            "release": "2.module+el8.10.0+21196+3f0abbca",
+                                            "source": "rpm",
+                                            "version": "2.229.0"
+                                        }
+                                    ],
+                                    "containernetworking-plugins": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": 1,
+                                            "name": "containernetworking-plugins",
+                                            "release": "2.module+el8.10.0+21366+f9cb49f8",
+                                            "source": "rpm",
+                                            "version": "1.4.0"
+                                        }
+                                    ],
+                                    "containers-common": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": 2,
+                                            "name": "containers-common",
+                                            "release": "81.module+el8.10.0+21340+c6c7475a",
+                                            "source": "rpm",
+                                            "version": "1"
+                                        }
+                                    ],
+                                    "copy-jdk-configs": [
+                                        {
+                                            "arch": "noarch",
+                                            "epoch": null,
+                                            "name": "copy-jdk-configs",
+                                            "release": "2.el8",
+                                            "source": "rpm",
+                                            "version": "4.0"
+                                        }
+                                    ],
+                                    "coreutils": [
+                                        {
+                                            "arch": "x86_64",
+                                            "epoch": null,
+                                            "name": "coreutils",
+                                            "release": "15.el8",
+                                            "source": "rpm",
+                                       

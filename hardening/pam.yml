@@ -1,0 +1,19 @@
+---
+- hosts: "{{ hosts }}"
+  gather_facts: yes 
+  remote_user: si
+
+  vars:
+#    src_path: /home/si/ansible/utility/file/route-eth2
+    src_path: /etc/yum.repos.d/*
+  
+  tasks:
+#  - name: sed 
+#    ansible.builtin.shell:
+#      cmd: sed -i -e 's/enabled=1/enabled=0/' {{ src_path }}
+
+  - name: "4.3.7 | PATCH | Ensure access to the su command is restricted | Setting pam_wheel to use_uid"
+    ansible.builtin.lineinfile:
+      path: /etc/pam.d/su
+      regexp: '^(#)?auth\s+required\s+pam_wheel\.so'
+      line: '#auth           required        pam_wheel.so use_uid group='

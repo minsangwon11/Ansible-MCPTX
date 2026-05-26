@@ -1,0 +1,7 @@
+roles : 2.1.2 | PATCH | Ensure chrony is configured
+roles : 2.1.3 | PATCH | Ensure chrony is not run as the root user
+roles : 2.2.5 | PATCH | Ensure dnsmasq server services are not in use | Remove package
+roles : 2.2.18 | PATCH | Ensure web server services are not in use | Remove httpd server
+roles : Restart_chronyd
+roles : Create ansible facts directory
+roles : Create ansible facts file

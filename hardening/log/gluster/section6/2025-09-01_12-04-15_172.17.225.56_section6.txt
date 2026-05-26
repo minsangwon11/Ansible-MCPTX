@@ -1,0 +1,2 @@
+roles : Create ansible facts directory
+roles : Create ansible facts file
